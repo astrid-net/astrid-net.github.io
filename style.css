@@ -1,0 +1,548 @@
+/* =============================================================================
+   HTML5 CSS Reset Minified - Eric Meyer
+   ========================================================================== */
+
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}
+body{line-height:1}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
+nav ul{list-style:none}
+blockquote,q{quotes:none}
+blockquote:before,blockquote:after,q:before,q:after{content:none}
+a{margin:0;padding:0;font-size:100%;vertical-align:baseline;background:transparent;text-decoration:none}
+mark{background-color:#ff9;color:#000;font-style:italic;font-weight:bold}
+del{text-decoration:line-through}
+abbr[title],dfn[title]{border-bottom:1px dotted;cursor:help}
+table{border-collapse:collapse;border-spacing:0}
+hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0}
+input,select{vertical-align:middle}
+li{list-style:none}
+::-webkit-scrollbar {
+    display: block;
+}
+
+/* =============================================================================
+   My CSS
+   ========================================================================== */
+
+/* ---- base ---- */
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200&display=swap');
+
+
+html,body{
+	position: fixed;
+	width:100%;
+	height:100%;
+	overflow-x: hidden;
+	-webkit-touch-callout: none; /* iOS Safari */
+	-webkit-user-select: none; /* Safari */
+	 -khtml-user-select: none; /* Konqueror HTML */
+		 -moz-user-select: none; /* Old versions of Firefox */
+			-ms-user-select: none; /* Internet Explorer/Edge */
+					user-select: none;
+					-ms-overflow-style: none;  /* IE and Edge */
+					scrollbar-width: none;
+}
+a{
+	color: inherit;
+}
+html{
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body{
+  font:normal 75% 'Raleway', sans-serif;
+}
+
+canvas{
+  display:block;
+  vertical-align:bottom;
+}
+
+
+/* ---- particles.js container ---- */
+
+#particles-js{
+	position: fixed;
+	top: 0;
+	left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/*--------HEADER---------*/
+.menu{
+	position: absolute;
+	top: 57px;
+	left: 57px;
+	width: 40px;
+	height: 40px;
+	border: 1px solid #303030;
+	border-radius: 300px;
+	cursor: pointer;
+	opacity: 1;
+}
+
+.menu-span{
+	position: absolute;
+	width: 90%;
+	border: 0.1px solid #303030;
+	transform:scale(0.5);
+}
+#first{
+	top: 25%;
+	left:1px;
+}
+#second{
+	top: 48%;
+	right: -10px;
+	width: 150%;
+}
+
+#third{
+	left: 1px;
+	bottom: 25%;
+}
+.back{
+	position: absolute;
+	top: 57px;
+	left: 40px;
+	font-family: 'Raleway Light', sans-serif;
+	font-size: 23px;
+	color: #303030;
+	opacity: .75;
+	cursor: pointer;
+	display: None;
+	text-decoration: none;
+}
+#back-main{
+	display: Block;
+}
+.back::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #303030;
+    transition: width .3s;
+}
+
+.back:hover::after {
+    width: 100%;
+    //transition: width .3s;
+}
+
+.logo{
+	position: absolute;
+	top: 55px;
+	left: 50%;
+	margin-left: -87.5px;
+	width: 180px;
+	height: 50px;
+	background-image: url('Graphics/logotype.png');
+	background-size: 180px;
+	background-repeat: no-repeat;
+}
+
+.menu-show{
+	padding: 0px;
+	position: absolute;
+	top: 22%;
+	left: 50%;
+	-ms-transform: translateY(-55%);
+	transform: translateY(-55%);
+	-ms-transform: translateX(-50%);
+	transform: translateX(-50%);
+	width: 200px;
+	text-align: center;
+	display: None;
+	opacity: 0;
+	transition: 0.3s;
+	transition-delay: 0.1s;
+}
+.menu-panel{
+	padding: 20px;
+	font-family: 'Raleway Light', sans-serif;
+	color: #303030;
+	text-align: center;
+	font-size: 20px;
+	width: 100%;
+	margin-left: -10px;
+	top: -10px;
+	transition: 0.3s;
+	z-index: 1;
+	cursor: pointer;
+	text-decoration: none;
+}
+
+.menu-panel::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #303030;
+    transition: width .3s;
+}
+
+.menu-panel:hover::after {
+    width: 100%;
+    //transition: width .3s;
+}
+
+/*-------BODY---------*/
+.main-div{
+	position: absolute;
+	margin-top: 24vh;
+	left: 50%;
+	width: 750px;
+	height: 530px;
+	margin-left: -450px;
+	transition: 0.3s;
+  overflow-y: scroll;
+}
+.main-txt{
+	font-family:'Raleway', sans-serif;
+	font-size: 75px;
+	font-weight: 800;
+	text-align: left;
+	color: #303030;
+	opacity: 1;
+}
+.sub-main-txt{
+	font-family:'Raleway', sans-serif;
+	font-size: 35px;
+	font-weight: 400;
+	text-align: left;
+	color: rgb(126, 126, 126, 0.8);
+	opacity: 1;
+}
+.main-button{
+	position: absolute;
+	width: 180px;
+	bottom: 0px;
+	left: 0;
+	text-align: center;
+	font-family: 'Raleway ExtraBold', sans-serif;
+	font-size: 18px;
+	color: #e06817;
+	cursor: pointer;
+	text-decoration: none;
+	letter-spacing: 2px;
+	border: 2px solid #e06817;
+	border-radius: 30px;
+	padding-top: 16px;
+	padding-bottom: 16px;
+	transition: background-color 0.5s ease-in-out;
+}
+#wp{
+	left: 200px;
+	color: white;
+	border: 2px solid rgb(176, 176, 176, 0.2);
+	background-color: rgb(176, 176, 176, 0.4);
+}
+#wp:hover{
+	border: 2px solid rgb(176, 176, 176, 1);
+	background-color: rgb(176, 176, 176, 1);
+}
+.main-button:hover{
+    background-color: #e06817;
+		opacity: 0.9;
+		color: white;
+}
+
+.container{
+	position: absolute;
+	width: 750px;
+	left: 50%;
+	top: 150px;
+	bottom: 0px;
+	margin-left: -375px;
+	font-family: 'Raleway', sans-serif;
+	padding-left: 10px;
+	padding-right: 10px;
+	visibility:hidden;
+	opacity: 0;
+	transition: 0.4s;
+	overflow-y: scroll;
+  overflow-x: hidden;
+}
+.animation{
+	position: relative;
+	display: inline-block;
+	width: 100%;
+	height: 320px;
+	margin-bottom: 0px;
+}
+
+.circle{
+	position: absolute;
+	width: 150px;
+	height: 150px;
+	background-color: rgba(224, 104, 23, 1);
+	border-radius: 200px;
+	left: 50%;
+	margin-left: -70px;
+	transition: 0.6s;
+	bottom: 0;
+	text-align: center;
+	color: white;
+	font-size: 20px;
+	line-height: 150px;
+}
+span {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: normal;
+}
+#main-circle{
+	width: 180px;
+	height: 180px;
+	margin-left: -90px;
+	font-size: 30px;
+	line-height: 180px;
+	z-index: 1;
+}
+#first-circle{
+	transition-delay: 0.2s;
+}
+#second-circle{
+	transition-delay: 0.4s;
+}
+#third-circle{
+	transition-delay: 0.6s;
+}
+#fourth-circle{
+	transition-delay: 0.8s;
+}
+#apart{
+	display: Block;
+	opacity: 1;
+}
+.big-box{
+  width: 80px;
+  height: 80px;
+  display: inline-block;
+	background-position: center;
+	background-size:80px 80px;
+	background-repeat: no-repeat;
+  margin-left: 19px;
+  margin-right: 19px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.img-box{
+	width: 60px;
+	height: 60px;
+	display: inline-block;
+	background-position: center;
+	background-size: 60px 60px;
+	background-repeat: no-repeat;
+}
+.title{
+	font-size: 50px;
+	text-align: left;
+	font-weight: 800;
+	color: #303030;
+	position: relative;
+	display: inline-block;
+	line-height:inherit;
+}
+#subtit{
+	margin-top: 20px;
+	margin-bottom: 10px;
+	font-size: 35px;
+}
+#strong{
+  font-weight: 900;
+}
+.sub-title{
+	font-size: 35px;
+	text-align: left;
+	font-weight: 800;
+	color: #303030;
+	padding-top: 60px;
+}
+.paragraph{
+	font-size: 30px;
+	position: relative;
+	display: inline-block;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 400;
+	color: #303030;
+	font-size: 20px;
+	text-align: justify;
+	line-height: 30px;
+	padding-bottom: 60px;
+}
+.service-container{
+	margin-top: 20px;
+	padding: 5px;
+	transition: .3s;
+	text-align:center;
+	cursor: pointer;
+}
+.service-container:hover{
+	background-color: rgba(0,0,0,.1)
+}
+
+.service-name{
+	font-family: 'Raleway ExtraBold', sans-serif;
+	font-size: 20px;
+	color: #303030;
+	opacity: 0.7;
+}
+#launch-input{
+  margin-top: -30px;
+	margin-bottom: 10px;
+	font-size: 35px;
+  width: 95%;
+  background-color: rgba(212, 212, 212, 0.3);
+  padding: 30px;
+  padding-right: 0px;
+  border-radius: 30px;
+  cursor: pointer;
+}
+#launch{
+  display: none;
+}
+#track-input{
+  margin-top: 0px;
+	margin-bottom: 10px;
+	font-size: 35px;
+  width: 95%;
+  background-color: rgba(212, 212, 212, 0.3);
+  padding: 30px;
+  padding-right: 0px;
+  border-radius: 30px;
+  cursor: pointer;
+}
+#track{
+  display: none;
+}
+#scam-input{
+  margin-top: 0px;
+	margin-bottom: 10px;
+	font-size: 35px;
+  width: 95%;
+  background-color: rgba(212, 212, 212, 0.3);
+  padding: 30px;
+  padding-right: 0px;
+  border-radius: 30px;
+  cursor: pointer;
+}
+#scam{
+  display: none;
+}
+#wallet-input{
+  margin-top: 0px;
+	margin-bottom: 10px;
+	font-size: 35px;
+  width: 95%;
+  background-color: rgba(212, 212, 212, 0.3);
+  padding: 30px;
+  padding-right: 0px;
+  border-radius: 30px;
+  cursor: pointer;
+}
+#wallet{
+  display: none;
+}
+.line{
+  position: fixed;
+  top: 0px;
+  left: 25%;
+  margin-left: -1.5px;
+  width: 3px;
+  height: 0.1%;
+  background-color: #303030;
+  transition: 0.3s;
+  transition-delay: 0.1s;
+}
+@media screen and (max-width: 880px){
+	.main-div{
+		position: absolute;
+		top: -40px;
+		width: 85%;
+		left: 7.5%;
+		margin-left: -2.5%;
+		max-width: 650px;
+	}
+	.main-txt{
+		font-size: 52px;
+	}
+	.sub-main-txt{
+		font-size: 25px;
+		font-weight: 600;
+	}
+
+	.container{
+		left: 0;
+		margin-left: 0;
+		width: 90%;
+		left: 5%;
+		margin-left: -2.5%;
+		top: 80px;
+	}
+  .animation{
+    transform: scale(0.7);
+  }
+	.main-button{
+		position: relative;
+		display:inline-block;
+		top: 20px;
+		left: 0px;
+	}
+	#wp{
+		top: 20px;
+		left: 0px;
+	}
+	.illustration{
+		height: 60vw;
+	}
+	.menu{
+		left: 20px;
+		top: 27px;
+	}
+	.back{
+		left: 20px;
+		top: 27px;
+	}
+	.logo{
+		top: 25px;
+	}
+  .line{
+    left: 1%;
+  }
+}
+@media screen and (max-width: 570px){
+  .logo{
+    background-size: 140px;
+    left: 53%;
+  }
+	.main-txt{
+		font-size: 11vw;
+	}
+	.sub-main-txt{
+		font-size: 5vw;
+		font-weight: 500;
+	}
+  .sub-title{
+    margin-top: 40px;
+  }
+	.main-button{
+		width: 98%;
+		top: 8px;
+		display: inline-block;
+	}
+	.menu-panel{
+		left: -40px;
+		margin-left: -20px;
+	}
+  .line{
+    left: 3%;
+  }
+  .animation{
+    height: 220px;
+    transform: scale(0.5);
+  }
+}

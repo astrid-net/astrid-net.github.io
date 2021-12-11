@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Tarsier</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.1, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" media="screen" href="style.css">
+  <link rel="shortcut icon" type="image/svg" href="Graphics/logo.svg"/>
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#launch-input").click(function(){
+    $("#launch").slideToggle("slow");
+  });
+});
+</script>
+<script>
+$(document).ready(function(){
+  $("#track-input").click(function(){
+    $("#track").slideToggle("slow");
+  });
+});
+</script>
+<script>
+$(document).ready(function(){
+  $("#scam-input").click(function(){
+    $("#scam").slideToggle("slow");
+  });
+});
+</script>
+<script>
+$(document).ready(function(){
+  $("#wallet-input").click(function(){
+    $("#wallet").slideToggle("slow");
+  });
+});
+</script>
+<body>
+
+<!-- particles.js container -->
+<div id="particles-js">
+  <div class="logo">
+  </div>
+
+  <div class="menu" onclick="showMenu();" id="menu-container">
+    <span class="menu-span" id="first"></span>
+    <span class="menu-span" id="second"></span>
+    <span class="menu-span" id="third"></span>
+  </div>
+
+  <div class="back" id="back-services" onclick="backServices()">back</div>
+  <div class="back" id="back-services-menu" onclick="backServiceMenu()">back</div>
+  <div class="back" id="back-future" onclick="backFuture()">back</div>
+  <div class="back" id="back-use" onclick="backUse()">back</div>
+  <div class="back" id="back-tokenomics" onclick="backTokenomics()">back</div>
+  <div class="back" id="back-road" onclick="backRoad()">back</div>
+  <div class="back" id="back-contacts" onclick="backContacts()">back</div>
+
+  <div class="menu-show" id="menu-show">
+    <div class="menu-panel" onclick="showFuture()">what is</div>
+    <div class="menu-panel" onclick="showUse()">how to use</div>
+    <div class="menu-panel" onclick="showRoad()">roadmap</div>
+    <div class="menu-panel" onclick="showTokenomics()">tokenomics</div>
+    <div class="menu-panel" onclick="showContacts()">community</div>
+    <div class="menu-panel" onclick='menuClose()'>back</div>
+  </div>
+
+  <div class="main-div" id="main">
+    <h1 class="main-txt">Created by the community<br>for the community.</h1>
+    <h2 class="sub-main-txt">Tarsier is a tool-aggregator multichain developed by community that allows you to monitor and manage your cryptoassets in the easiest, fastest and most secure way across multiple blockchains.</h2>
+    <a href="https://t.me/tarsier_bot"><div class="main-button">GO TO APP</div></a>
+    <a href="TarsierPaper.pdf"><div class="main-button" id="wp">WHITEPAPER</div></a>
+  </div>
+
+
+
+  <div class="container" id="future">
+    <p class="title">Manage your cryptoassets from one place.</p>
+    <div class="animation">
+      <div class="circle" id="main-circle"><span>Tarsier <br> App</span></div>
+      <div class="circle" id="first-circle"><span>Token Balance <br> Defi Assets</span></div>
+      <div class="circle" id="second-circle"><span>Token <br> Tracking</span></div>
+      <div class="circle" id="third-circle"><span>Scam <br> Detection</span></div>
+      <div class="circle" id="fourth-circle"><span>Multiple <br> Wallets</span></div>
+    </div>
+    <p class="title" id="subtit">What is Tarsier?</p>
+    <p class="paragraph">Tarsier is a community driven multichain tools aggregator. 'Tools aggregator multichain' means this software allows you to use different tools to track your cryptoassets across multiple blockchains. 'Community driven' means that all decisions on the progress of the project, all its functions and features are decided by the members of its community. Anyone can help grow the project by joining the Telegram channel and proposing new ideas. The software was called Tarsier because it indicates the name of a cute big-eyed monkey with excellent eyesight. The purpose of the software is precisely to give you an excellent 'view' of all your cryptoassets.
+    </p>
+
+    <p class="title" id="subtit">What can I do with Tarsier?</p>
+    <div class="paragraph" style="font-size: 20px;">
+These are the different chains that Tarsier currently works on. Every day we work to ensure compatibility with as many blockchains as possible. <br>
+Currently the functions you can perform with Tarsier are the following: <br> <br>
+<strong>•Wallet Handler </strong>Enter your wallets and track the performance of your assets directly from Tarsier. Currently you can perform these functions: <br>
+<div style="margin-left: 20px;">
+<strong>•Balance Tracking</strong>: it allows you to see the quantity and the consideration <br>
+dollar value of all the cryptocurrencies in your wallet in all 6 chains available on
+Tarsier.<br>
+<strong>•DeFi Tracking</strong>: allows you to monitor your farmed assets, on all 6
+chain and over 400 protocols.</div><br>
+<strong>•Token Tracking </strong> Select a token and target price. When the token reaches the target price, Tarsier will alert you <br>
+<strong>•Scam Detector </strong> Select a token and Tarsier will give you all the information you need to understand if it is a valid project or a scam.
+</div>
+
+<p class="title" id="subtit">What technologies does Tarsier use?</p>
+<div class="paragraph">
+  Tarsier is extremely complex software, consisting of eight different modules and over 1100 lines of code. Its features are guaranteed by a <strong>hybrid technology</strong> that combines excellent <strong>performance with high efficiency, with high standards of privacy for the user.</strong> Therefore the main approaches used to retreive user data are Data Gathering and Smart Contract ABI Execution. <br> <br>
+the <strong>Data Gathering</strong> technique includes all those technologies such as server requests or web browser automation that allow the extraction of data from different web platforms. <br>
+The <strong>ABI</strong> execution method is slightly different. Basically, through some particular API we connect to a node on one of the supported chains, and we interrogate it, obtaining the data requested by us. <br> <br>
+This hybrid approach allows us to optimize various technical processes, which would otherwise become slow or ineffective. However, Tarsier's initial software architecture was designed by one mind, and as such it can have limitations. Therefore we hope an increase of devs in the Tarsier community with which to collaborate to solve any limitations and to be able to grant software as performing as possible.
+</div>
+
+<p class="title" id="subtit">Which chains are compatible with Tarsier?</p>
+<div class="paragraph">
+  Tarsier allows you to track your investments across six different chains. Currently there are few software that allow you to manage such a large number of chains. Here is a list of chains currently compatible with Tarsier:
+</div>
+<div class="big-box" style="background-image: url('https://static.debank.com/image/chain/logo_url/eth/42ba589cd077e7bdd97db6480b0ff61d.png');"><p style="position:absolute; margin-top:-20px;">Ethereum</p></div>
+<div class="big-box" style="background-image: url('https://static.debank.com/image/chain/logo_url/bsc/7c87af7b52853145f6aa790d893763f1.png');"><p style="position:absolute; margin-top:-20px;">BSC</p></div>
+<div class="big-box" style="background-image: url('https://static.debank.com/image/chain/logo_url/xdai/8b5320523b30bd57a388d1bcc775acd5.png');"><p style="position:absolute; margin-top:-20px;">xDai</p></div>
+<div class="big-box" style="background-image: url('https://static.debank.com/image/chain/logo_url/matic/d3d807aff1a13e9ba51a14ff153d6807.png');"><p style="position:absolute; margin-top:-20px;">Polygon</p></div>
+<div class="big-box" style="background-image: url('https://static.debank.com/image/chain/logo_url/ftm/700fca32e0ee6811686d72b99cc67713.png');"><p style="position:absolute; margin-top:-20px;">Fantom</p></div>
+<div class="big-box" style="background-image: url('https://static.debank.com/image/chain/logo_url/okt/1228cd92320b3d33769bd08eecfb5391.png');"><p style="position:absolute; margin-top:-20px;">OKEx</p></div>
+
+<p class="title" id="subtit">Which protocols are compatible with Tarsier?</p>
+<div class="paragraph">
+  Tarsier is one of the most complete apps that allows you to track your DeFi Assets. More than 400 protocols are integrated into our platform. Here is a list:
+</div>
+
+</div>
+
+  <div class="container" id="use">
+    <div class="title">How to use Tarsier?</div>
+    <div class="paragraph" style="margin-bottom: 0px;">Click on one of the section to know more.</div>
+
+    <div class="title" id="launch-input">Software Launch</div>
+    <div class="paragraph" id="launch">Currently the Tarsier software works on Telegram, so you can easily use it by <a href="https://t.me/tarsier_bot" style="text-decoration: underline;">entering from this link.</a>
+You can start the bot by typing the command <strong>/start.</strong> If this is your first time using it you will be asked to enter an Ethereum address (<strong>Warning:</strong> Be sure the address is valid, otherwise it will not allow you to enter it), and then it will show you the Command Menu. If you have used Tarsier before, you will simply be shown the Bot Command Menu. It consists of the following buttons: <br>
+<strong>•Wallets</strong> buttons whose functionality in the Wallets section <br>
+<strong>•Token Tracker</strong> button whose functions are detailed in the token tracking section<br>
+<strong>•Scam Alert</strong> button whose functions are detailed in the Scam Detection section<br>
+<strong>•Add/Delete Wallet</strong> button whose functions are detailed in the Wallet Handling section<br> <br> At any time you are you can stop Tarsier operation simply by typing the command <strong>/end.</strong></div>
+
+    <div class="title" id="track-input">Token Tracker</div>
+    <div class="paragraph" id="track">
+If you click the Token Tracker button you will be shown a menu with the following buttons: <br><br>
+<strong>•Track New Token</strong> If you want to track a new Token click this button. To insert the new token use this syntax: chain_name/contract_address/+ or -and percentage. The available chains are the following: <br> eth (Ethereum), bsc (Binance Smart Chain), ftm (Fantom), matic (Polygon), xdai (xDai), heco (Holochain), okt (OKEx). The contract address can easily be found on the web. For example, if you want to be alerted when the Cake token (found on the Binance Smart Chain) increases its price by + 20%, you should write like this: <br> bsc/0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82/+20%. <br> When the token will reach the target price Tarsier will sent you a message.
+<strong>•Delete Token</strong> if you no longer need to track the price of a token you can click on this button to delete it. Just enter the token contract address.
+</div>
+
+    <div class="title" id="scam-input">Scam Detector</div>
+    <div class="paragraph" id="scam">Scam Detector is a function that allows you to have an in-depth analysis of a Token. Through it you will have several elements that will allow you to understand if a Token is a potential scam. This is a list of the data you will receive: <br> <strong>•Overview</strong>: Contains some general information about the token, such as circulating supply, max supply, market cap and number of holders. Projects with a low market cap or with low number of holders are riskier.
+<br><strong>•Holders</strong>: When a large percentage of tokens are owned by a few wallets it is not favorable. PLEASE NOTE Some holders are accompanied by a contract emoji. It could indicate that a contract is associated with that address (it could indicate a liquidity contract with a Dex or a blocked address cannot sell its tokens). Contracts that indicate liquidity generally contain the name of the Dex with which it is entered into.
+<br>  <strong>•Contract Verified</strong>: Blockchain Explores verification allows users to check, verify and confirm the transactions taking place in the blockchain. A verified contract reduces financial fraud by ensuring that there are no compromised databases.
+<br>  <strong>•Ownership</strong>: Indicates who is the owner of the token smart contract. When this is possessed by the token creator, it can allow the latter to obtain special privileges (for example, it could prevent everyone from selling the token except him). It is good practice that ownership is renounced.
+<br>  <strong>•Smart Contract Analysis</strong>: A scanner analyzes the Solidity code in the smart contract and identifies some potential risks. PLEASE NOTE: Sometimes this scanner fails to read liquidity contracts and alerts you to the inability to sell the token, even if it is not true. As a precaution, try to buy and sell a small amount of it. More information about  scamming can be found <a href="https://www.reddit.com/r/CryptoCurrency/comments/n76wtr/rugpulls_and_honeypots_what_they_are_and_how_you/" style="text-decoration: underline;">on this reddit</a></div>
+
+    <div class="title" id="wallet-input">Wallet Handling</div>
+    <div class="paragraph" id="wallet">The first time you will be shown the main menu of Tarsier, the first button will be the one that will allow you to manage the assets of the wallet you have registered. By clicking on this button you can access two features: <br>
+<strong>•Token Balance</strong> allows you to see the balance of the tokens on the wallet
+<br>  <strong>•Defi Assets</strong> allows you to see your DeFi investments on over 400 protocols
+More information on supported chains and protocols can be found in the <strong>Home>what is</strong> section.
+<br>  The last two buttons of the menu (Add Wallet / Delete Wallet) allow you to add other wallets to be tracked in case you need them.</div>
+
+  </div>
+
+  <div class="container" id="road">
+    <div class="title">Everyone will do everything on Tarsier.</div>
+    <div class="paragraph" style="margin-left: 8px;">These are the updates our Team has planned. Anyway we are always open to our Community Advices. If you have new one <a href="https://t.me/+a7HvsYbJXf43YTA0" style="text-decoration: underline;">Join our Telegram channel and talk us about!</a></div>
+    <div class="title" id="subtit"><span style="margin-left: -20px;">◉</span>Short Term Updates</div>
+    <div class="line" id="line"></div>
+    <div class="paragraph" style="margin-left: 15px;">
+      <strong>Blockchains Integration</strong> You will be able to perform the functions of Tarsier for these chains/blockchains: Cro, Avax, Solana, Luna <br><br>
+      <strong>Server Upgrade</strong >If our users continue to grow, we will upgrade our servers to always offer the best User Experience <br>
+      <strong></strong>
+    </div>
+    <div class="title" id="subtit"><span style="margin-left: -20px;">◉</span>New Functionalities Integration</div>
+    <div class="paragraph" style="margin-left: 15px;">
+      <strong>Cex Features Integration</strong> The first features introduced about the CEX on Tarsier. By selecting a Cex from those available and a Crypto available for staking on the Cex, <strong>Staking Alert</strong> will notify you when it will be possible to deposit the Crypto. This tool is useful in cases where CEXs offer to a limited number of users excellent APRs, and it is difficult to find the available deposit. <br><br>
+      <strong>Dex Features Integration</strong> Introduction of the feature that will allow you to track the trend of APYs in the Liquidity Pools of the main DEXs on the main Chains.
+    </div>
+    <div class="title" id="subtit"><span style="margin-left: -20px;">◉</span>dApp Development</div>
+    <div class="paragraph" style="margin-left: 15px;">
+      This will be our first major update. All our features will be integrated into a single dApp, more powerful, faster and safer. On our dApp you will be able to stake Tarsier tokens, obtaining many advantages on Tarsier features. Staking tokens will introduce you to Tarsier's new <strong>DAO system</strong> that will be introduced with the dApp.
+    </div>
+    <div class="title" id="subtit"><span style="margin-left: -20px;">◉</span>Sentiment Analysis System based on AI</div>
+    <div class="paragraph" style="margin-left: 15px;">
+      A new Sentiment Analysis system based on Artificial Intelligence will allow you to know the investor sentiment on many crypto. This will help you identify the upcoming trends and which cryptocurrencies are in FOMO.
+    </div>
+    <div class="title" id="subtit"><span style="margin-left: -20px;">◉</span>Cex&Dex Trading Integration</div>
+    <div class="paragraph" style="margin-left: 15px;">
+      This update will allow you to trade on the main Cex and Dex directly on Tarsier. After this you will be able to literally do everything on Tarsier, from the asset evaluation phase to the purchase and monitoring phase.
+    </div>
+   </div>
+
+   <div class="container" id="tokenomics">
+     <div class="title" style="font-size: 65px; font-style: italic;">Coming soon...</div>
+     <div class="paragraph">Tarsier Community is currently planning the Tarsier Token. It will be a validation tool and will allow you to use a lot of new software features in the future. The token will be completely Community Driven and each token owner will be able to express their opinion on the integration of new software features. <br><br> <strong>Do you have an idea about the Tarsier Token or about new Tarsier features? <a href="https://t.me/+a7HvsYbJXf43YTA0" style="text-decoration: underline;">Join our Telegram channel!</a></div>
+   </div>
+
+<div class="container" id="contacts">
+  <div class="title">Joining the Tarsier Community is the best thing you'll do today.</div>
+
+  <div class="title" id="subtit">Why joining Tarsier Community?</div>
+  <div class="paragraph">
+    Community is the core of our project. Tt is the place where we learn, advise and grow together.
+     Anyone can access the community and will be welcome. In our community we discuss about the new features to integrate on Tarsier, we help new users to use Tarsier and we publish updates on the status of the App.
+     If you appreciate Tarsier it is the best way to stay connected with us.
+  </div>
+  <div class="title" id="subtit">How can I recommend a new feature for the project?</div>
+  <div class="paragraph">Recommend a feature to add to Tarsier is a very important thing, because it helps us to grow the project, make it more solid and democratic. To conisgliare a features, you just need to access our Telegram channel and write a message in which you tag the admin of the group @gicappaemme and describe your proposal. Subsequently, the admin will publish a poll in which all members of the community vote to decide whether to develop your proposal or not. We are planning to create a community on Reddit to make the process of integrating a new feature easier.</div>
+
+  <div class="title" id="subtit">How to contact the Tarsier team?</div>
+  <div class="paragraph">Contacting the Tarsier team for any inquiries is extremely easy. You can do this in two ways: <br> Telegram (Contact of the founder of Tarsier): @gicappaemme <br> eMail: tarsier.finance@gmail.com </div>
+</div>
+
+<!-- scripts -->
+<script src="particles.js"></script>
+<script src="js/app.js"></script>
+
+<!-- stats.js -->
+<script>
+  var count_particles, stats, update;
+  stats = new Stats;
+  stats.setMode(0);
+  stats.domElement.style.position = 'absolute';
+  stats.domElement.style.left = '0px';
+  stats.domElement.style.top = '0px';
+  document.body.appendChild(stats.domElement);
+  count_particles = document.querySelector('.js-count-particles');
+  update = function() {
+    stats.begin();
+    stats.end();
+    if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) {
+      count_particles.innerText = window.pJSDom[0].pJS.particles.array.length;
+    }
+    requestAnimationFrame(update);
+  };
+  requestAnimationFrame(update);
+</script>
+
+<script type="text/javascript">
+  function showMenu(){
+    var main = document.getElementById('main')
+    var menu = document.getElementById('menu-show')
+
+    main.style.opacity = '0';
+    menu.style.opacity = '1';
+    menu.style.display = 'Block';
+
+    setTimeout(()=>{main.style.display = 'None';}, 300);
+  }
+</script>
+
+<script type="text/javascript">
+function menuClose(){
+  var main = document.getElementById('main')
+  var menu = document.getElementById('menu-show')
+
+  main.style.opacity = '1';
+  menu.style.opacity = '0';
+  main.style.display = 'Block';
+
+  setTimeout(()=>{menu.style.display = 'None';}, 300);
+}
+</script>
+
+
+<script type="text/javascript">
+function backServices(){
+  var main = document.getElementById('main')
+  var services = document.getElementById('services')
+  var menu = document.getElementById('menu-container')
+  var back = document.getElementById('back-services')
+
+  main.style.display = 'Block';
+  menu.style.display = 'Block';
+  main.style.opacity = '1';
+  services.style.opacity = '0';
+  back.style.display = 'None';
+
+  setTimeout(()=>{services.style.display = 'None';}, 300);
+}
+</script>
+
+<script type="text/javascript">
+  function showFuture(){
+    var future = document.getElementById('future')
+    var menu = document.getElementById('menu-container')
+    var menuc = document.getElementById('menu-show')
+    var back = document.getElementById('back-future')
+    var firstCircle = document.getElementById('first-circle')
+    var secondCircle = document.getElementById('second-circle')
+    var thirdCircle = document.getElementById('third-circle')
+    var fourthCircle = document.getElementById('fourth-circle')
+
+    future.style.visibility = 'visible';
+    future.style.opacity = '1';
+    future.style.display = "Block"
+    firstCircle.style.marginLeft = "-250px";
+    firstCircle.style.bottom = "20px";
+    secondCircle.style.marginLeft = "-175px";
+    secondCircle.style.bottom = "160px";
+    thirdCircle.style.marginLeft = "25px";
+    thirdCircle.style.bottom = "160px";
+    fourthCircle.style.marginLeft = "100px";
+    fourthCircle.style.bottom = "20px";
+    menu.style.display = 'None';
+    menuc.style.opacity = '0';
+    back.style.display = 'Block';
+
+    setTimeout(()=>{main.style.display = 'None';}, 300);
+  }
+</script>
+
+<script type="text/javascript">
+  function backFuture(){
+    var future = document.getElementById('future')
+    var menu = document.getElementById('menu-container')
+    var menuc = document.getElementById('menu-show')
+    var back = document.getElementById('back-future')
+
+    future.style.visibility = 'hidden';
+    future.style.opacity = '0';
+    menuc.style.display = 'Block';
+    menuc.style.opacity = '1';
+    menu.style.display = 'Block';
+    back.style.display = 'None';
+
+
+    setTimeout(()=>{future.style.display = 'None';}, 300);
+  }
+</script>
+
+
+<script type="text/javascript">
+  function showUse(){
+    var future = document.getElementById('use')
+    var menu = document.getElementById('menu-container')
+    var menuc = document.getElementById('menu-show')
+    var back = document.getElementById('back-use')
+
+    future.style.visibility = 'visible';
+    future.style.opacity = '1';
+    future.style.display = "Block"
+    menu.style.display = 'None';
+    menuc.style.opacity = '0';
+    back.style.display = 'Block';
+
+
+    setTimeout(()=>{main.style.display = 'None';}, 300);
+  }
+</script>
+
+<script type="text/javascript">
+  function backUse(){
+    var future = document.getElementById('use')
+    var menu = document.getElementById('menu-container')
+    var menuc = document.getElementById('menu-show')
+    var back = document.getElementById('back-use')
+
+    menuc.style.display = 'Block';
+    menuc.style.opacity = '1';
+    menu.style.display = 'Block';
+    future.style.opacity = '0';
+    back.style.display = 'None';
+
+
+    setTimeout(()=>{future.style.display = 'None';}, 300);
+  }
+</script>
+
+<script type="text/javascript">
+  function showRoad(){
+    var future = document.getElementById('road')
+    var menu = document.getElementById('menu-container')
+    var menuc = document.getElementById('menu-show')
+    var back = document.getElementById('back-road')
+    var line = document.getElementById('line')
+
+    future.style.visibility = 'visible';
+    future.style.opacity = '1';
+    future.style.display = "Block"
+    menu.style.display = 'None';
+    menuc.style.opacity = '0';
+    back.style.display = 'Block';
+    line.style.height = '100%';
+
+
+    setTimeout(()=>{main.style.display = 'None';}, 300);
+  }
+</script>
+
+<script type="text/javascript">
+  function backRoad(){
+    var future = document.getElementById('road')
+    var menu = document.getElementById('menu-container')
+    var menuc = document.getElementById('menu-show')
+    var back = document.getElementById('back-road')
+    var line = document.getElementById('line')
+
+    menuc.style.display = 'Block';
+    menuc.style.opacity = '1';
+    menu.style.display = 'Block';
+    future.style.opacity = '0';
+    back.style.display = 'None';
+    line.style.height = '0.1%';
+
+
+    setTimeout(()=>{future.style.display = 'None';}, 300);
+  }
+</script>
+
+
+<script type="text/javascript">
+  function showTokenomics(){
+    var future = document.getElementById('tokenomics')
+    var menu = document.getElementById('menu-container')
+    var menuc = document.getElementById('menu-show')
+    var back = document.getElementById('back-tokenomics')
+
+    future.style.visibility = 'visible';
+    future.style.opacity = '1';
+    future.style.display = "Block"
+    menu.style.display = 'None';
+    menuc.style.opacity = '0';
+    back.style.display = 'Block';
+
+
+    setTimeout(()=>{main.style.display = 'None';}, 300);
+  }
+</script>
+
+<script type="text/javascript">
+  function backTokenomics(){
+    var future = document.getElementById('tokenomics')
+    var menu = document.getElementById('menu-container')
+    var menuc = document.getElementById('menu-show')
+    var back = document.getElementById('back-tokenomics')
+
+    menuc.style.display = 'Block';
+    menuc.style.opacity = '1';
+    menu.style.display = 'Block';
+    future.style.opacity = '0';
+    back.style.display = 'None';
+
+
+    setTimeout(()=>{future.style.display = 'None';}, 300);
+  }
+</script>
+
+<script type="text/javascript">
+  function showContacts(){
+    var future = document.getElementById('contacts')
+    var menu = document.getElementById('menu-container')
+    var menuc = document.getElementById('menu-show')
+    var back = document.getElementById('back-contacts')
+
+    future.style.visibility = 'visible';
+    future.style.opacity = '1';
+    future.style.display = "Block"
+    menu.style.display = 'None';
+    menuc.style.opacity = '0';
+    back.style.display = 'Block';
+
+
+    setTimeout(()=>{main.style.display = 'None';}, 300);
+  }
+</script>
+
+<script type="text/javascript">
+  function backContacts(){
+    var future = document.getElementById('contacts')
+    var menu = document.getElementById('menu-container')
+    var menuc = document.getElementById('menu-show')
+    var back = document.getElementById('back-contacts')
+
+    menuc.style.display = 'Block';
+    menuc.style.opacity = '1';
+    menu.style.display = 'Block';
+    future.style.opacity = '0';
+    back.style.display = 'None';
+
+
+    setTimeout(()=>{future.style.display = 'None';}, 300);
+  }
+</script>
+<script type="text/javascript">
+  function showServiceMenu(){
+    var future = document.getElementById('services')
+    var menu = document.getElementById('menu-container')
+    var menuc = document.getElementById('menu-show')
+    var back = document.getElementById('back-services-menu')
+
+    future.style.display = 'Block';
+    future.style.opacity = '1';
+    menu.style.display = 'None';
+    menuc.style.opacity = '0';
+    back.style.display = 'Block';
+
+
+    setTimeout(()=>{main.style.display = 'None';}, 300);
+  }
+</script>
+
+<script type="text/javascript">
+  function backServiceMenu(){
+    var future = document.getElementById('services')
+    var menu = document.getElementById('menu-container')
+    var menuc = document.getElementById('menu-show')
+    var back = document.getElementById('back-services-menu')
+
+    menuc.style.display = 'Block';
+    menuc.style.opacity = '1';
+    menu.style.display = 'Block';
+    future.style.opacity = '0';
+    back.style.display = 'None';
+
+
+    setTimeout(()=>{future.style.display = 'None';}, 300);
+  }
+</script>
+
+
+</body>
+</html>
