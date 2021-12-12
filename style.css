@@ -238,7 +238,7 @@ canvas{
 	left: 200px;
 	color: white;
 	border: 2px solid rgb(153, 153, 153, 0.2);
-	background-color: rgb(153, 153, 153, 0.4);
+	background-color: rgb(153, 153, 153, 0.5);
 }
 #wp:hover{
 	border: 2px solid rgb(153, 153, 153, 1);
