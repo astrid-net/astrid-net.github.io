@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Astrid</title>
+    <link rel="icon" type="image/x-icon" href="/Users/mariadaniello/Desktop/ARTEMIDE/Graphics/favicon.svg">
+
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
+    </style>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+    $(document).ready(function(){
+      $("#about").click(function(){
+        $("#main-panel").fadeOut("fast");
+        $("#close").fadeIn("slow");
+        $("#particles-js").css("height","96px");
+      });
+
+      $("#close").click(function(){
+        $("#close").fadeOut("slow");
+        $("#main-panel").fadeIn("slow");
+        $("#close").css("visibility","visible");
+        $("#particles-js").css("height","100%");
+      });
+    });
+    </script>
+  </head>
+
+  <style media="screen">
+    body{
+      margin:0;
+      font-family: 'Source Sans Pro', sans-serif;
+      color: white;
+      -webkit-touch-callout: none; /* iOS Safari */
+        -webkit-user-select: none; /* Safari */
+         -khtml-user-select: none; /* Konqueror HTML */
+           -moz-user-select: none; /* Old versions of Firefox */
+            -ms-user-select: none; /* Internet Explorer/Edge */
+                user-select: none;
+    }
+
+    canvas {
+      display: block;
+      vertical-align: bottom;
+    }
+
+    #particles-js{
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: #441E4B;
+      transition: 0.2s;
+      transition-delay: 0.3s;
+    }
+    .frame{
+      position: fixed;
+      margin-top: 96px;
+      width: 100%;
+      height: 100%;
+      border: 0px;
+    }
+    .count-particles{
+      background: #0000000;
+      position: absolute;
+      top: 48px;
+      left: 0;
+      width: 0px;
+      height: 0px;
+    }
+
+    .js-count-particles{
+      font-size: 1.1em;
+    }
+
+    #stats,
+    .count-particles {
+      -webkit-user-select: none;
+      margin-top: 5px;
+      margin-left: 5px;
+    }
+
+    #stats {
+      border-radius: 3px 3px 0 0;
+      overflow: hidden;
+    }
+
+    .count-particles{
+      border-radius: 0 0 3px 3px;
+    }
+
+    .logo{
+      position: absolute;
+      width: 64px;
+      height: 64px;
+      top: 18px;
+      left: 50%;
+      margin-left: -32px;
+      background-image: url('Graphics/logo.svg');
+      background-size: cover;
+      background-position: center;
+      z-index: 1;
+    }
+
+    .social{
+      position: absolute;
+      width: 32px;
+      height: 32px;
+      top: 32px;
+      right: 32px;
+      background-image: url('https://www.iconsdb.com/icons/preview/white/telegram-xxl.png');
+      background-size: 60%;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    #twitter{
+      background-image: url('https://www.iconsdb.com/icons/preview/white/twitter-xxl.png');
+      right: 80px;
+    }
+    #close{
+      cursor: pointer;
+      position: absolute;
+      width: 48px;
+      height: 48px;
+      top: 16px;
+      left: 16px;
+      background-image: url('https://img.icons8.com/material-outlined/48/ffffff/delete-sign.png');
+      background-size: 60%;
+      background-position: center;
+      background-repeat: no-repeat;
+      display: none;
+      transition: 0.2s;
+      transition-delay: 0.3s;
+    }
+    .main-text{
+      position: absolute;
+      width: 100%;
+      top: 40%;
+      margin-top: -40px;
+      left: 0;
+      text-align: center;
+      font-size: 54px;
+      font-weight: 100;
+    }
+    .button{
+      position: absolute;
+      top: 110%;
+      left: 50%;
+      border: 1px solid white;
+      border-radius: 300px;
+      font-size: 16px;
+      font-weight: 100;
+      letter-spacing: 1px;
+      padding: 12px;
+      cursor: pointer;
+      font-family: 'Helvetica';
+    }
+    #about{
+      margin-left: -150px;
+      background-color: white;
+      color: #4c034c;
+    }
+    #claccount{
+      margin-left: 0px;
+      font-weight: 400;
+      color: white;
+    }
+  </style>
+
+  <body>
+    <iframe src="https://astrid-network.gitbook.io/astrid/algorithm" class="frame"></iframe>
+    <div id="particles-js">
+      <div class="logo"></div>
+      <div class="social"></div>
+      <div class="social" id="twitter"></div>
+      <div id="close"></div>
+
+      <div class="main-text" id="main-panel">
+        Fast, Reliable and AI-Powered<br>NFTs data for your dApp.
+
+        <div class="button" id="about">What is Astrid</div>
+        <div class="button" id="claccount">Chainlink Account</div>
+      </div>
+
+    </div>
+
+    <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="http://threejs.org/examples/js/libs/stats.min.js"></script>
+  </body>
+
+  <script type="text/javascript">
+particlesJS("particles-js", {"particles":{"number":{"value":160,"density":{"enable":true,"value_area":800}},"color":{"value":"#ffffff"},"shape":{"type":"circle","stroke":{"width":0,"color":"#000000"},"polygon":{"nb_sides":5},"image":{"src":"img/github.svg","width":100,"height":100}},"opacity":{"value":0.6471010661384636,"random":true,"anim":{"enable":true,"speed":1,"opacity_min":0,"sync":false}},"size":{"value":0.6,"random":true,"anim":{"enable":false,"speed":4,"size_min":0.3,"sync":false}},"line_linked":{"enable":false,"distance":150,"color":"#ffffff","opacity":0.4,"width":1},"move":{"enable":true,"speed":0.2,"direction":"none","random":true,"straight":false,"out_mode":"out","bounce":false,"attract":{"enable":false,"rotateX":600,"rotateY":600}}},"interactivity":{"detect_on":"canvas","events":{"onhover":{"enable":true,"mode":"bubble"},"onclick":{"enable":true,"mode":"repulse"},"resize":true},"modes":{"grab":{"distance":400,"line_linked":{"opacity":1}},"bubble":{"distance":250,"size":0,"duration":2,"opacity":0,"speed":3},"repulse":{"distance":400,"duration":0.4},"push":{"particles_nb":4},"remove":{"particles_nb":2}}},"retina_detect":true});
+  </script>
+</html>
