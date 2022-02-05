@@ -1,2 +1,2 @@
-# Controbuting in the mass adoption throught AI.
+# Astrid. Controbuting to Blockchain the mass adoption throught AI.
 
