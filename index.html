@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Astrid</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.1, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="icon" type="image/x-icon" href="https://raw.githubusercontent.com/giaccomgl/giaccomgl.github.io/main/Graphics/favicon.svg">
+
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
+    </style>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+    $(document).ready(function(){
+      $("#doc").click(function(){
+        $("#main-panel").fadeOut("fast");
+        $("#close").fadeIn("slow");
+        $("#particles-js").css("height","96px");
+        $("#rocket").css("top","-400%");
+      });
+
+      $("#close").click(function(){
+        $("#close").fadeOut("slow");
+        $("#main-panel").fadeIn("slow");
+        $("#close").css("visibility","visible");
+        $("#particles-js").css("height","100%");
+        $("#rocket").css("top","40%");
+      });
+    });
+    </script>
+
+    <script>
+    $(document).ready(function(){
+      $("#whatis").click(function(){
+        $("#home").css("top","-100%");
+        $("#about").css("top","0%");
+        $("#about").css("opacity","100%");
+        $("#particles-js").css("background","#ecd6ff");
+        $("#header").css("background-color","#522e8f");
+      });
+
+      $("#close").click(function(){
+        $("#close").fadeOut("slow");
+        $("#main-panel").fadeIn("slow");
+        $("#close").css("visibility","visible");
+        $("#particles-js").css("height","100%");
+        $("#rocket").css("top","40%");
+      });
+    });
+    </script>
+
+    <script>
+    $(document).ready(function(){
+      $("#view-doc").click(function(){
+        $("#home").css("top","0%");
+        $("#about").css("top","100%");
+        $("#about").delay("slow").css("opacity","0%");
+        $("#main-panel").fadeOut("fast");
+        $("#close").fadeIn("slow");
+        $("#particles-js").css("height","96px");
+        $("#particles-js").css("background","rgba(81,46,143,1)");
+        $("#rocket").css("top","-400%");
+      });
+  });
+    </script>
+  </head>
+
+  <style media="screen">
+    body{
+      margin:0;
+      font-family: 'Source Sans Pro', sans-serif;
+      color: white;
+      overflow: hidden;
+      word-wrap: break-word;
+      -webkit-touch-callout: none; /* iOS Safari */
+        -webkit-user-select: none; /* Safari */
+         -khtml-user-select: none; /* Konqueror HTML */
+           -moz-user-select: none; /* Old versions of Firefox */
+            -ms-user-select: none; /* Internet Explorer/Edge */
+                user-select: none;
+    }
+    h1{
+      font-size: 48px;
+      line-height: 60px;
+    }
+    h2{
+      font-size: 32px;
+      line-height: 0px;
+    }
+    p{
+      font-size: 18px;
+      font-weight: 200;
+      line-height: 30px;
+    }
+    .container{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      transition: 0.8s;
+      overflow-y: hidden;
+      overflow-x: hidden;
+      word-wrap: break-word;
+    }
+    #about{
+      color:#522e8f;
+      top: 100%;
+      opacity: 0%;
+      overflow-y: scroll;
+    }
+    .textwriting{
+      position: absolute;
+      top: 100px;
+      left: 50%;
+      width: 800px;
+      margin-left: -400px;
+      height: 100%;
+    }
+    canvas {
+      display: block;
+      vertical-align: bottom;
+      overflow: hidden;
+    }
+
+    #particles-js{
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background:rgba(81,46,143,1);
+      transition: 0.5s;
+      overflow: hidden;
+    }
+    .frame{
+      position: fixed;
+      margin-top: 96px;
+      width: 100%;
+      height: 100%;
+      border: 0px;
+    }
+    .count-particles{
+      background: #0000000;
+      position: absolute;
+      top: 48px;
+      left: 0;
+      width: 0px;
+      height: 0px;
+    }
+
+    .js-count-particles{
+      font-size: 1.1em;
+    }
+
+    .count-particles {
+      -webkit-user-select: none;
+      margin-top: 5px;
+      margin-left: 5px;
+    }
+
+    #stats {
+      border-radius: 3px 3px 0 0;
+      overflow: hidden;
+    }
+
+    .count-particles{
+      border-radius: 0 0 3px 3px;
+    }
+    .header{
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100px;
+      width: 100%;
+      background-color: transparent;
+      transition: 0.5s;
+      z-index: 1000;
+    }
+    .logo{
+      position: fixed;
+      width: 64px;
+      height: 64px;
+      top: 18px;
+      left: 50%;
+      margin-left: -32px;
+      background-image: url('Graphics/logo.svg');
+      background-size: cover;
+      background-position: center;
+      z-index: 1;
+    }
+
+    .social{
+      position: fixed;
+      width: 32px;
+      height: 32px;
+      top: 32px;
+      right: 32px;
+      background-image: url('https://raw.githubusercontent.com/giaccomgl/giaccomgl.github.io/main/Graphics/telegram.png');
+      background-size: 60%;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    #twitter{
+      background-image: url('https://raw.githubusercontent.com/giaccomgl/giaccomgl.github.io/main/Graphics/twitter.png');
+      right: 80px;
+    }
+    #close{
+      cursor: pointer;
+      position: absolute;
+      width: 48px;
+      height: 48px;
+      top: 16px;
+      left: 16px;
+      background-image: url('https://raw.githubusercontent.com/giaccomgl/giaccomgl.github.io/main/Graphics/close.png');
+      background-size: 60%;
+      background-position: center;
+      background-repeat: no-repeat;
+      display: none;
+      transition: 0.2s;
+      transition-delay: 0.3s;
+    }
+    .main-text{
+      position: absolute;
+      width: 100%;
+      top: 40%;
+      margin-top: -40px;
+      left: 0;
+      text-align: center;
+      font-size: 54px;
+      font-weight: 600;
+      z-index: 1;
+    }
+    .bg-image{
+      position: absolute;
+      width: 650px;
+      height: 650px;
+      top: 40%;
+      margin-top: -280px;
+      left: 50%;
+      margin-left: -325px;
+      transition: 1.2s;
+    }
+    .button{
+      position: absolute;
+      left: 50%;
+      border: 1px solid white;
+      border-radius: 300px;
+      font-size: 16px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      padding: 12px;
+      cursor: pointer;
+    }
+    #whatis{
+      top: 110%;
+      margin-left: -150px;
+      background-color: white;
+      color: rgba(81,46,143,1);
+    }
+    #doc{
+      top: 110%;
+      margin-left: 0px;
+      font-weight: 400;
+      color: white;
+      background-color: rgba(81,46,143,1);
+    }
+    #view-doc{
+      position: fixed;
+      bottom: 20px;
+      margin-left: -120px;
+      background-color:rgba(81,46,143,1);
+      color: white;
+      z-index: 1000;
+      border: 1px solid white;
+    }
+    .scope {
+      position: relative;
+      width: 200px;
+      height: 200px;
+      top: 80px;
+      left: 40%;
+      transform-style: preserve-3d;
+      animation: slid 50s linear infinite;
+    }
+
+    .scope span {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      transform-origin: center;
+      transform-style: preserve-3d;
+      transform: rotateY(calc(var(--i) * 45deg)) translateZ(350px);
+    }
+    .scope span img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 6px;
+      border: 0.5px solid white;
+      object-fit: cover;
+      transition: 2s;
+    }
+    .scope span:hover img {
+      transform: translateY(-50px) scale(1);
+    }
+    @keyframes slid {
+      0% {
+        transform: perspective(1000px) rotateY(0deg);
+      }
+      100% {
+        transform: perspective(1000px) rotateY(360deg);
+      }
+    }
+    @media screen and (max-width: 800px){
+      .textwriting{
+        width: 94%;
+        left: 3%;
+        margin-left: 0;
+      }
+      .main-text{
+        font-size: 36px;
+        top: 40%;
+        width: 95%;
+        left: 5%;
+        margin-left: -2.5%;
+      }
+      .bg-image{
+        width: 500px;
+        height: 500px;
+        margin-top: -200px;
+        left: 50%;
+        margin-left: -250px;
+      }
+      .button{
+        display: inline-block;
+        position: relative;
+        width: 80%;
+        left: 0px;
+        margin-left: 0px;
+        font-size: 18px;
+      }
+      #whatis{
+        left: 75px;
+      }
+      #doc{
+      left: 0px;
+      }
+      #view-doc{
+        left: 0px;
+        margin-left: 10%;
+        text-align: center;
+      }
+    }
+    }
+  </style>
+  </style>
+
+
+
+  <body>
+    <iframe src="https://astrid-network.gitbook.io/astrid-documentation/" class="frame"></iframe>
+    <div id="particles-js">
+    <div class="container" id="home">
+
+      <div class="header" id="header">
+        <div class="logo"></div>
+        <div class="social"></div>
+        <div class="social" id="twitter"></div>
+        <div id="close"></div>
+      </div>
+
+      <img class="bg-image" id="rocket" src="Graphics\earth.png" alt="">
+
+      <div class="main-text" id="main-panel">
+        Fast, Reliable and AI-Powered<br>NFTs data for your dApp.<br>
+
+        <div class="button" id="whatis">What is Astrid</div>
+        <div class="button" id="doc">Documentation</div>
+
+      </div>
+    </div>
+
+    <div class="container" id="about">
+      <div class="button" id="view-doc">View API Documentation</div>
+      <div class="textwriting">
+        <h1>Connecting Blockchain World with the Real One.</h1>
+        <img src="Graphics/ConnectWorld.png" alt="" style="width: 80%; margin-left: 10%;">
+        <h2>Smart Contracts & Chainlink</h2>
+          <p>When two parties want to reach a certain agreement, they can run into several difficulties: a defaulting party or the cost and the presence of an intermediary. The smart contract is a perfect way to overcome these problems. If we assume that two parties enter into a smart contract, it will be permanently deposited on the blockchain, without any kind of intermediary. If the event for which it was scheduled occurs, it will perform a series of pre-established functions by the two parties. The field of application of this concept is very broad, ranging from insurance to finance. <br><br>
+          So Smart Contracts are essentially blocks of conditionally and automatically executing code stored in the Blockchain. They may have conditions that are triggered automatically when a certain value or event is reached. The data that arises from this event can be on-chain (occurs within the blockchain) or off-chain (occurs in the external world). Since smart contracts by their nature are not able to read off-chain data, they need an intermediary who is able to acquire the data from the outside world and translate it into a language understandable by smart contracts.<br><br>
+          <strong>ChainLink comes has exactly this role. It's is a decentralized network of nodes that provide data and information from off-blockchain sources to on-blockchain smart contracts via oracles.</strong></p>
+        <img src="Graphics/HowTo.png" alt="" style="width: 60%; margin-left: 20%;">
+        <p style="text-align: center; font-size: 14px;">Real World Data -> ChainLink Oracle -> Smart Contract -> Execution</p>
+        <br><br>
+        <h2>NFTs</h2>
+          <p>We all know that a Blockchain is essentially a ledger in which informations are permanently stored. Transitions on Blockchains that we all know (like Bitcoin or Ethereum) are governed by the presence of a currency that allows you to pay transition fees or reward miners. Within these complex eco-systems it is possible to find Smart Contracts that represent Tokens, i.e. Coins that do not have their own Blockchains but use others to be used and exchanged.<br><br>
+            <strong>A particular type of Token are the NFTs, acronym of Not Fungible Token. Unlike traditional tokens, these types of tokens are unique and cannot be exchanged with each other.</strong><br>The concept behind these tokens has huge applications in real life: an NFT can be a work of art, a photograph or a property. This technology would allow to univocally assign the ownership of this tokenizable object to an entity in a safe, effective and fast way. <br><br>
+            The current trend sees NFTs used to tokenize artworks, luxury goods and characters to be used within metaverses. However, the use cases of NFTs do not end there: soon they will also be used in DeFi protocols, as a collateral or as fractionalized items (and many other purposes). The <strong>introduction of NFTs in DeFi ecosystem</strong>, in cryptoassets-tracking dApps or in statements of particular smart contracts, <strong>will soon make it important to have all kind of available data related to NFTs. Here starts the role of Astrid.
+            </strong>
+          </p>
+
+        <div class="scope">
+          <span style="--i:1;"><img src="https://lh3.googleusercontent.com/pdSlqsRXIGC69bqiLX-TF760GkBVB0Z-pehDpYT7XDsPEPHOq0_o7dNXcmnkoEVomTOwgrgOzlBj89IGdc8ROCPkoAAGBnHt9R__HQ=w550" alt="not found"></span>
+          <span style="--i:2;"><img src="https://lh3.googleusercontent.com/_Tuk-bN4Ec-6nEvVXGjbb6wa7RlteivPrTFc0N7gvBFECd0Zofg2utAbTWLBpl4Qsvr8iVbwahtGQVf4EDmlDp_tZta0b1J7Dov-=w550" alt="not found"></span>
+          <span style="--i:3;"><img src="https://lh3.googleusercontent.com/nrRUrqAQ5X1edZYGxN7AXs0eolVeGWttAV7HPudY6DGucNyGeDjvAULckLaiKoIlOn7PuWebf5eoBJi7j5zPeGdphr4l_gIRtWt9TQ=w550" alt="not found"></span>
+          <span style="--i:4;"><img src="https://lh3.googleusercontent.com/t-wWOqFu5OdZfwIInqr-PqbkF_ROs4l9tOM5Y421h6pCL68pnA5CEn7jmp-tXOFXdUlxOH1iA630P-Mva2yQfkZhXP20_XpSnxU_=w550" alt="not found"></span>
+          <span style="--i:5;"><img src="https://lh3.googleusercontent.com/cAMxa0x47ALq4y6uEo0iXKSGM7RYMc-RqqQp-LxT4H2IwE0kkXiJYdyelIC0oOO9Dk3imAe6JSiwtKCVQxhccWMlVOTkRWtke4XVxQ=w550" alt="not found"></span>
+          <span style="--i:6;"><img src="https://lh3.googleusercontent.com/J_o98BC4l1r2WRLDSh_ob_aYgs_Ll5z-UV5tOr-jdQ-Smva-fZq7to2iYTLe_IafH71-1wJ8STe-cnIPRJIPHx4NiO5MEGciyicKVwM=w550" alt="not found"></span>
+          <span style="--i:7;"><img src="https://lh3.googleusercontent.com/IPeK0J1YZb4unGfRGuJzVwPDp-A9htvr04E8mOhLjomXzlf_N0HRBWcPE0Kz0S3iJkeZYTqwblmVxT2jXRM9vRsBWzkAugPqj81oRw=w550" alt="not found"></span>
+          <span style="--i:8;"><img src="https://lh3.googleusercontent.com/NeHBEZOlkFd4fDDLkC9TUD_xwUjSZIhZ7lhM6dGVGbSzDe4AJ8_C5QARykZNCtYI2FWK2mB9lMPeKauvgcmMyS44u0e2lnUjJtzAqQ=w550" alt="not found"></span>
+        </div>
+        <p style="text-align: center; font-size: 14px; margin-top: 180px;">Some pieces of Bored Ape. One of the most famous NFTs Collection.</p>
+        <br><br>
+        <h2>Astrid</h2>
+        <p>
+          Our awareness of a demand for NFT-related data that will grow over time has made us question which types of data may be the most requested by developers. Comparing with some Smart Contracts experts, we have identified these three important areas:
+          <br><br><strong>●NFTs Collection</strong>-We will return any data you may need about the NFT collections. From the features of the collection to market data. All in one place.<br>
+          <strong>●Single NFT Asset</strong>-Also in this case we will return all the data you need related to the single asset. Its Rarity Score, its market data and its features will be at your disposal.<br>
+          <strong>●NFT Price Estimation</strong>-Our diamond. A Machine Learning algorithm will consider over 15 variables to determine the current estimate of an NFT with an accuracy never seen before. Initially the service will be offered for the first 100 collections, then we will extend it to all the others.<br><br>
+          If you want to learn more about data that Astrid offers, we recommend that you access our Documentation.<br><br><br><br>
+        </p>
+
+      </div>
+    </div>
+    </div>
+
+    <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="http://threejs.org/examples/js/libs/stats.min.js"></script>
+  </body>
+
+  <script type="text/javascript">
+particlesJS("particles-js", {"particles":{"number":{"value":160,"density":{"enable":true,"value_area":800}},"color":{"value":"#ffffff"},"shape":{"type":"circle","stroke":{"width":0,"color":"#000000"},"polygon":{"nb_sides":5},"image":{"src":"img/github.svg","width":100,"height":100}},"opacity":{"value":0.6471010661384636,"random":true,"anim":{"enable":true,"speed":1,"opacity_min":0,"sync":false}},"size":{"value":0.6,"random":true,"anim":{"enable":false,"speed":4,"size_min":0.3,"sync":false}},"line_linked":{"enable":false,"distance":150,"color":"#ffffff","opacity":0.4,"width":1},"move":{"enable":true,"speed":0.2,"direction":"none","random":true,"straight":false,"out_mode":"out","bounce":false,"attract":{"enable":false,"rotateX":600,"rotateY":600}}},"interactivity":{"detect_on":"canvas","events":{"onhover":{"enable":true,"mode":"bubble"},"onclick":{"enable":true,"mode":"repulse"},"resize":true},"modes":{"grab":{"distance":400,"line_linked":{"opacity":1}},"bubble":{"distance":250,"size":0,"duration":2,"opacity":0,"speed":3},"repulse":{"distance":400,"duration":0.4},"push":{"particles_nb":4},"remove":{"particles_nb":2}}},"retina_detect":true});
+  </script>
+</html>
