@@ -189,36 +189,26 @@
       z-index: 1;
     }
 
-    .social{
-      position: fixed;
-      width: 32px;
-      height: 32px;
-      top: 32px;
-      right: 32px;
-      background-image: url('https://raw.githubusercontent.com/giaccomgl/giaccomgl.github.io/main/Graphics/telegram.png');
-      background-size: 60%;
-      background-position: center;
-      background-repeat: no-repeat;
-    }
-    #twitter{
-      background-image: url('https://raw.githubusercontent.com/giaccomgl/giaccomgl.github.io/main/Graphics/twitter.png');
-      right: 80px;
-    }
-    #close{
-      cursor: pointer;
+    .header-button{
       position: absolute;
-      width: 48px;
-      height: 48px;
-      top: 16px;
-      left: 16px;
-      background-image: url('https://raw.githubusercontent.com/giaccomgl/giaccomgl.github.io/main/Graphics/close.png');
-      background-size: 60%;
-      background-position: center;
-      background-repeat: no-repeat;
-      display: none;
-      transition: 0.2s;
-      transition-delay: 0.3s;
+      top: 26px;
+      font-size: 20px;
+      font-weight: 200;
+      padding: 8px;
+      border-radius: 4px;
+      cursor: pointer;
     }
+    .header-button:hover{
+      border: 0.5px solid white;
+    }
+    #home{
+      right: 26px;
+    }
+    #back{
+      left: 26px;
+      display: none;
+    }
+
     .main-text{
       position: absolute;
       width: 100%;
