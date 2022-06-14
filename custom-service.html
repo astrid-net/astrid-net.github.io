@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Astrid-NFTs Data API</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.1, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
+    </style>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script>
+    $(document).ready(function () {
+      $('#home').delay(500).fadeIn("slow");
+      $('#home').css("display", "block");
+      $('#home-2').delay(500).fadeIn("slow");
+      $('#home-2').css("display", "block");
+
+    });
+    </script>
+
+    <script>
+    $(document).ready(function(){
+      $(".menu-button").click(function(){
+        $(".menu-panel").slideToggle("slow");
+        $('#menu').delay(250).fadeToggle("slow");
+      });
+
+    });
+    </script>
+  </head>
+
+
+
+
+  <body>
+    <div id="bg"></div>
+    <div class="header">
+      <div class="logo"></div>
+
+      <div class="menu-button" id="menu-btn" onclick="myFunction(this)">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </div>
+
+      <div class="menu-panel">
+        <div id="menu">
+          <div class='menu-element' id="btn-data-providing"><a href="nft-data-api.html">NFT API</a></div>
+          <div class='menu-element' id="btn-dataset-model"><a href="datasets-model.html">DATASETS&MODELS</a></div>
+          <div class='menu-element' id="btn-custom-service">CUSTOMIZED SERVICES</div>
+          <div class='menu-element' id="btn-contact-us">CONTACT US</div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="container" id="home">
+
+      <div class="title" id="home-title">
+        <h1>Choose who does your tasks better than everyone.</h1>
+        <p style="padding-left:0; padding-right: 0;">Astrid Team is ready to do any of your tasks, better than everyone. Data Analysis, APIs Development, Blockchain Transactions decoding, Machine Learning Models and much more.</p>
+      </div>
+      <img class="image" src="Graphics/Images/CustomService.png" id="home-image" alt="Background Home">
+
+    </div>
+
+    <div class="container" id="home-2">
+      <h2>How can Astrid help you?</h2>
+      <p>
+        Astrid is a firm specialized in any process related to Data Analysis . If you are interested in a customized service , contact us .Our skills can be summed in the following points:
+        <br><br>•<strong> Data Mining </strong> A database containing all the necessary data is probably the most important step to build effective analyses. This phase requests specific competences since it is not easy to obtain the requested data. We are able to extract any kind of data . We can use APIs or develop quick and efficient crawlers. The extracted data can be stored in datasets , Excel files or we can develop APIs to consult them.
+        <br>•<strong> Data processing </strong> you could  have the data you need but they could not be ready for a specific analysis. In that case it is necessary they are processed so that we can extract information from them.We can process any kind of data in the way the client requests .
+        <br>•<strong> Data Analysis </strong> It allows you to interpret the data as useful information for your request .You will be able to understand the correlations e the influence of an event on your activity or to find the weak spots and the strong points. We can carry out traditional analyses , and through modern machine learning techniques ,we can make specific-event predictions .
+        <br>•<strong>APIs Development </strong> do you need a fast and efficient system capable of extracting, processing and making data available via API for your App? We can develop the service for you.
+        <br><br>
+        Astrid's team also has Blockchain expertise. <strong>We are able to extract, decode and read any type of transaction from Solidity Smart Contracts.</strong>
+      </p>
+
+      <h2>Astrid Portfolio</h2>
+      <p>We actually established a partnership with <strong>DataWhale</strong> to develop APIs for their new brand App, MEDUSA. We'll discuss about the work details in this section soon.</p>
+
+    </div>
+
+
+
+  </body>
+</html>
+
+<script>
+function myFunction(x) {
+  x.classList.toggle("change");
+}
+</script>

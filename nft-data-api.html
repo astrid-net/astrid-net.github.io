@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Astrid-NFTs Data API</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.1, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
+    </style>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script>
+    $(document).ready(function () {
+      $('#home').delay(500).fadeIn("slow");
+      $('#home').css("display", "block");
+      $('#home-2').delay(500).fadeIn("slow");
+      $('#home-2').css("display", "block");
+
+    });
+    </script>
+
+    <script>
+    $(document).ready(function(){
+      $(".menu-button").click(function(){
+        $(".menu-panel").slideToggle("slow");
+        $('#menu').delay(250).fadeToggle("slow");
+      });
+
+    });
+    </script>
+  </head>
+
+
+
+
+  <body>
+    <div id="bg"></div>
+    <div class="header">
+      <div class="logo"></div>
+
+      <div class="menu-button" id="menu-btn" onclick="myFunction(this)">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </div>
+
+      <div class="menu-panel">
+        <div id="menu">
+          <div class='menu-element' id="btn-data-providing"><a href="nft-data-api.html">NFT API</a></div>
+          <div class='menu-element' id="btn-dataset-model"><a href="datasets-model.html">DATASETS&MODELS</a></div>
+          <div class='menu-element' id="btn-custom-service">CUSTOMIZED SERVICES</div>
+          <div class='menu-element' id="btn-contact-us">CONTACT US</div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="container" id="home">
+
+      <div class="title" id="home-title">
+        <h1>Fast, Reliable and High-Quality NFTs Data for your App.</h1>
+        <p style="padding-left:0; padding-right: 0;">Astrid is a Data Provider in the API3 ecosystem. You can obtain different types of off-chain data on each NFT or entire collections on the main marketplaces. In the future , we are going to innovate the Blockchain Data Providing with the artificial intelligence.</p>
+      </div>
+      <img class="image" src="Graphics/Images/DataProviding.png" id="home-image" alt="Background Home">
+
+    </div>
+
+    <div class="container" id="home-2">
+      <h2>Which NFTs Data does Astrid offer?</h2>
+      <p>Currently through our service you will be able to obtain market data (Capitalization, Floor Price, Volume) and the main features (Number of Holders, Rarity Traits) about entire NFT collections and about individual pieces on the three main Marketplaces (Opensea, Rarible and Looksrare ). Here is a simple but complete list of data you will be able to obtain:<br><br>
+      	<strong>• NFT Collections on Opensea</strong> - Name, Supply, Total Holders, Average Rarity Score, FloorPrice, Total Volume, Market Cap, Average Price, Sales Data (One Day, One Week and One Month changes).<br>
+      	<strong>• NFT Single Piece on OpenSea</strong> - Name, Image URL, Number of Sales, Rarity Score, Traits (with Rarity Percentages), Last Sale Data <br>
+      	<strong>• NFT Collection on Rarible</strong> - Total Items, Total Holders, Buyers in Last 24h, Transactions in Last 24h, Floor Price, Average Price, Market Cap, Total Volume <br>
+      	<strong>• NFT Single Piece on Rarible (Faster Request)</strong> - Name, Attributes (Without Rarity Percentages), Content, Last Bid, TakePrice <br>
+      	<strong>• NFT Single Piece on Rarible (Slower Way)</strong> - Name, Image URL, Traits (With Rarity Percentages), Rarity Score <br>
+      	<strong>• NFT Collection on Looksrare</strong> - Name, No. Items, FloorPrice, Total Volume <br>
+      	<strong>• NFT Single Piece on Looksrare</strong> - Name, Image URL, Rarity Score, Last Price, Top Offer, Traits (with Rarity Percentages) <br><br>
+        Please Note: All Market data will be represented in Dollars and Ethereum Tokens. There could be two different types of requests because they use different data extraction techniques and allow you to have different types of output. For an in-depth technical view, we invite you to look deeper into our API documentation. <strong>If you need a specific custom data of this kind , you can contact us through the channels on our website.</strong></p>
+
+      <h2>Next Updates</h2>
+      <p>
+        These are the updates we are already working on that will be available in the next months:<br><br>
+          <strong>• Sales price history of individual NFT pieces</strong><br>
+           <strong>• Historical Floor Price of the best NFT collections</strong><br>
+        	 <strong>• Compatibility with multiple Blockchains </strong>- We believe that our service can be very useful for expanding the ecosystems of all blockchains. For this, we work hard every day to integrate it across all major blockchains. At first our service will be available on Ethereum and Polygon, but we are already working to integrate it on all the main EVM-compatible chains (Avax, Harmony etc...) and Solana, another big player in the NFT world.<br>
+           <strong>• NFT Price Estimation </strong>- We are already working on developing an AI model that allows us to evaluate the price of an NFT. Our experience will allow us to build the model using over 15 variables, making it the most accurate and with the largest number of compatible collections of any competitor.<br>
+           <strong>• Art transfer model </strong>- Imagine being able to create a stylized NFT with your own photo. With the Computer Vision algorithms we are developing you will be able to do this. This type of NFT is called generativeNFT and we are deeply convinced that they will be the future of NFTs.
+      </p>
+
+      <h2>How to subscribe to Astrid APIs</h2>
+      <p>
+        If you need Off-Chain Data for your dApp you can <a href="https://api3.org/apis/Astrid-Network/NFT-Data-API" style="text-decoration: underline;">find our Account on the API3 website.</a> Here you can fill out the form to request access to our API.
+        <br>If you need our API for a Traditional App, you can contact us throught one of <a href="contacts.html" style="text-decoration: underline;">Our Channels.</a>
+      </p>
+    </div>
+
+
+
+  </body>
+</html>
+
+<script>
+function myFunction(x) {
+  x.classList.toggle("change");
+}
+</script>

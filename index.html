@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Astrid-Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.1, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
+    </style>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script>
+    $(document).ready(function () {
+      $('#home').delay(500).fadeIn("slow");
+      $('#home').css("display", "block");
+      $('#home-2').delay(500).fadeIn("slow");
+      $('#home-2').css("display", "block");
+
+    });
+    </script>
+
+    <script>
+    $(document).ready(function(){
+      $(".menu-button").click(function(){
+        $(".menu-panel").slideToggle("slow");
+        $('#menu').delay(250).fadeToggle("slow");
+      });
+
+    });
+    </script>
+  </head>
+
+
+
+
+  <body>
+    <div id="bg"></div>
+    <div class="header">
+      <div class="logo"></div>
+
+      <div class="menu-button" id="menu-btn" onclick="myFunction(this)">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </div>
+
+      <div class="menu-panel">
+        <div id="menu">
+          <div class='menu-element' id="btn-data-providing"><a href="nft-data-api.html">NFT API</a></div>
+          <div class='menu-element' id="btn-dataset-model"><a href="datasets-model.html">DATASETS&MODELS</a></div>
+          <div class='menu-element' id="btn-custom-service">CUSTOMIZED SERVICES</div>
+          <div class='menu-element' id="btn-contact-us">CONTACT US</div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="container" id="home">
+
+      <div class="title" id="home-title">
+        <h1>We explore new ways to integrate Data Science into Blockchain World.</h1>
+        <p style="padding-left:0; padding-right: 0;">Astrid is a company born to bring the power, accuracy and reliability of Data Science to the Blockchin World throught multiple service.</p>
+      </div>
+      <img class="image" src="Graphics/Images/Background.png" id="home-image" alt="Background Home">
+
+    </div>
+
+    <div class="container" id="home-2">
+      <h2>What is Astrid?</h2>
+      <p>Astrid is a software development team born just over a year ago in Puglia, Italy. <br><br>
+      Our experience in the field of programming is many years, with a strong training in the field of Data Science. You can see some of our previous work on GitHub.<br><br>A little over a year ago we learned about Blockchain Technology. The idea of decentralization and the concept of ownership of data in a unique way immediately fascinated us. From that day to now, our goal has never changed: <br>
+      <strong>Every day we explore new ways to connect Blockchain with Data Science and close the gap with centralized technologies.</strong></p>
+
+      <h2>What services does Astrid offer?</h2>
+      <p>We currently offer the following services:
+      <br><br>•<strong>Data Providing</strong> We have partnered with API3 - one of the most promising oracles - to become Data Providers on their protocol. Take a look at the Data Providing section to find out the data you can get through Astrid.
+      <br><br>•<strong>Datasets & Model</strong> Anything related to Data Science - from extraction, processing and analysis using complex algorithms - is in our DNA. We have decided to partner with Ocean Protocol companies to offer our high quality Datasets and AI-Models to all Ocean users. Explore the Datasets & Model section to find out more.
+      <br><br>•<strong>Customized Services</strong> Our Data Science and Blockchain expertise allows us to develop any type of customized service you need. Visit the Customized Service section to see some of our work and find out how we can help you.
+
+      <br><br>We work every day to offer our services with the highest standards of quality and efficiency.
+      We are also looking for new challenges every day. Don't be surprised if we partner with a new protocol in the future!</p>
+
+
+      <h2>Long Term Goals</h2>
+      <p>The blockchain is an innovative technology with many applications, but still with several gaps. Our long-term goal is to fill these gaps. One of the problems of the blockchain is that it currently makes the development of Artificial Intelligence models difficult due to the high need for computing power.<br><br>
+Thanks to our skills, we can develop different models of Deep Learning, Computer Vision and ML and provide them to blockchain via an Oracle API. The integration of AI in the world of blockchain has infinite ways of applications. It can help enormously in mass adoption,increasing the customer experience or making dApps more profitable.<br><br> <strong>We are planning a disruptive development plan for several AI models. Follow us on our main channels to stay updated on the latest Astrid News.</strong></p>
+    </div>
+
+
+  </body>
+</html>
+
+<script>
+function myFunction(x) {
+  x.classList.toggle("change");
+}
+</script>
