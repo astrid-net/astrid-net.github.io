@@ -174,6 +174,17 @@ a{
   background-size: 100%;
   background-repeat: no-repeat;
 }
+.home-icon{
+  position: absolute;
+  top: 40px;
+  margin-top: -15px;
+  right: 30px;
+  width: 30px;
+  height: 30px;
+  background-size: cover;
+  background-position: center;
+  background-image: url("Graphics/Icons/home.png");
+}
 .icon{
   width: 60px;
   height: 60px;
