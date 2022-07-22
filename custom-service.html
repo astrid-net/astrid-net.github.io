@@ -4,7 +4,6 @@
     <meta charset="utf-8">
     <title>Astrid-NFTs Data API</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.1, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <link rel="icon" type="image/png" href="Graphics/Icons/logo.png">
     <link rel="stylesheet" href="style.css">
 
     <style>
@@ -19,7 +18,6 @@
       $('#home').css("display", "block");
       $('#home-2').delay(500).fadeIn("slow");
       $('#home-2').css("display", "block");
-
     });
     </script>
 
@@ -51,13 +49,10 @@
       <div class="menu-panel">
         <div id="menu">
           <div class='menu-element' id="btn-data-providing"><a href="nft-data-api.html">NFT API</a></div>
-          <div class='menu-element' id="btn-dataset-model"><a href="datasets-model.html">DATASETS&MODELS</a></div>
-          <div class='menu-element' id="btn-custom-service"><a href="custom-service.html">CUSTOMIZED SERVICES</a></div>
+          <div class='menu-element' id="btn-custom-service"><a href="custom-service.html">CONSULTING</a></div>
           <div class='menu-element' id="btn-contact-us"><a href="contacts.html">CONTACT US</a></div>
         </div>
       </div>
-      
-      <a href="index.html"><div class="home-icon"></div></a>
 
     </div>
 
@@ -74,18 +69,45 @@
     <div class="container" id="home-2">
       <h2>How can Astrid help you?</h2>
       <p>
-        Astrid is a firm specialized in any process related to Data Analysis . If you are interested in a customized service , contact us .Our skills can be summed in the following points:
-        <br><br>•<strong> Data Mining </strong> A database containing all the necessary data is probably the most important step to build effective analyses. This phase requests specific competences since it is not easy to obtain the requested data. We are able to extract any kind of data . We can use APIs or develop quick and efficient crawlers. The extracted data can be stored in datasets , Excel files or we can develop APIs to consult them.
-        <br>•<strong> Data processing </strong> you could  have the data you need but they could not be ready for a specific analysis. In that case it is necessary they are processed so that we can extract information from them.We can process any kind of data in the way the client requests .
-        <br>•<strong> Data Analysis </strong> It allows you to interpret the data as useful information for your request .You will be able to understand the correlations e the influence of an event on your activity or to find the weak spots and the strong points. We can carry out traditional analyses , and through modern machine learning techniques ,we can make specific-event predictions .
-        <br>•<strong>APIs Development </strong> do you need a fast and efficient system capable of extracting, processing and making data available via API for your App? We can develop the service for you.
-        <br><br>
-        Astrid's team also has Blockchain expertise. <strong>We are able to extract, decode and read any type of transaction from Solidity Smart Contracts.</strong>
+        <strong>Blockchain Analytics Development</strong> - Siamo capaci di sviluppare applicazioni per estrarre, processare e analizzare dati on-chain e off-chain usando Python. Il nostro lavoro si divide generalmente in questi step:<br>
+        <strong>-Data Mining</strong>: A real-time updated database containing all the necessary data is probably the most important step to build effective analyses. This phase requests specific competences since it is not easy to obtain the requested data. We are able to extract any kind of data . We can use APIs or develop quick and efficient crawlers. The extracted data can be stored in datasets , Excel files or we can develop APIs to consult them. <br>
+        <strong>-Data Processing</strong>: you could have the data you need but they could not be ready for a specific analysis. In that case it is necessary they are processed so that we can extract information from them.We can process any kind of data in the way the client requests. <br>
+        <strong>-Data Analysis</strong>: It allows you to interpret the data as useful information for your request .You will be able to understand the correlations e the influence of an event on your activity or to find the weak spots and the strong points. We can carry out traditional analyses , and through modern machine learning techniques ,we can make specific-event predictions. <br>
+        <strong>-APIs/UI Development</strong>: do you need a fast and efficient system capable of extracting, processing and making data available via API for your App? We can develop the service for you. Even with beautiful UI designed with best UX criterias. <br><br>
+
+        <strong>Blockchain Development</strong> - We can help you develop your new, disruptive and decentralized idea. We have a team that can help you develop any type of dApp:<br>
+        <strong>-DeFi Platform</strong>: Enter the world of DeFi through a platform with its own token, with the function of swapping, farming and staking. We can do it by using the most famous programming languages (Rust, Solidity) and the best hosting technologies.<br>
+        <strong>-NFTs</strong>: Whether you need a minting app or a custom smart contract to manage your ERC-721 tokens, we can help.<br>
+        <strong>-Custom Smart Contracts</strong>: Do you need to develop a custom smart contract? We can do it.<br>
+
       </p>
 
       <h2>Astrid Portfolio</h2>
-      <p>We actually established a partnership with <strong>DataWhale</strong> to develop APIs for their new brand App, MEDUSA. We'll discuss about the work details in this section soon.</p>
+      <p>We have developed a Blockchain Analitycs service for DataWhale, a startup working with Ocean Protocol.
+They run an app (ALGA) and a dataset on the protocol that required robust software that was capable of extracting, processing and analyzing thousands of transactions. The data had to be updated in real-time and extracted through an APIs service. The enpoints to be developed were the following:<br>
+a. Liquidity pool transaction volume in OCEAN, i.e. all pool transactions that are going "in" or "out" of the pool, and organize the liquidity pool volume in the following timeframes: 12H, 24H, 3D, 7D, 30D, 90D, 180D <br>
+b. Number of liquidity pool transactions in total count, i.e. counting the absolute number of all transactions and splitting them to "IN" and "OUT" over the following timeframes: 24H, 7D, 30D, 90D <br>
+c. Total Datatoken swap volume in OCEAN, i.e. how many Datatokens swapped for OCEAN and vice versa. <br>
+d. Average amount of liquidity provided, i.e. total liquidity provision / number of wallets. <br>
+And. Number of Datatoken swaps in total count, i.e. counting the absolute number of all swaps and splitting them to "SWAP" [Ocean -> Datatoken] and "UNSWAP" [Datatoken -> Ocean] over the following timeframes: 24H, 7D, 30D, 90D <br>
+f. Average price at which the Datatoken has been swapped, i.e. average price of all Datatoken swaps. <br>
+g. Total Dataset consumes [i.e. how many times a dataset has been sold / accessed] to be taken from the Ocean Protocol subgraph available on Github. <br>
+h. Average and Median price in OCEAN for which the dataset has been 'accessed', i.e. the average and median to what people have paid to access the data. <br>
+the. Number of Datatoken holders, i.e. how many unique addresses hold the respective Datatoken. <br>
+j. Number of Liquidity Providers, i.e. how many unique addresses are currently providing liquidity to the Datatoken pool. <br>
+k. All time high Datatoken price <br>
+L. All time high Datatoken liquidity <br>
+m. All time low Datatoken price <br>
+n. All time low Datatoken liquidity <br>
+o. Estimated swap fees generated <br>
+p. Estimated annual return for stakers <br>
+q. Current and historic Datatoken pricing data in OCEAN for all Ethereum and Polygon Datatoken liquidity pools on Ocean Market V4, retrieved from sub-graph, and organized in the following timeframes: Daily / Weekly / Monthly / 3-Month / 6-Month / 12-Month <br>
+r. [Tentative] Current and historic Datatoken pool liquidity data in OCEAN for all Ethereum and Polygon Datatoken liquidity pools on Ocean Market V4, retrieved from sub-graph, and organized in the following timeframes: Daily / Weekly / Monthly / 3-Month / 6- Month / 12-Month <br>
+In just under a month, we have developed the entire infrastructure. Unfortunately, due to a hack into Ocean's smart contract, the release date of the App has been postponed.
 
+<br><br>
+If you want to see more projects we worked on, please visit our <a href="https://github.com/astrid-net">Github Portfolio.</a>
+</p>
     </div>
 
 
