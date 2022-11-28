@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>NFT API</title>
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      setTimeout(function(){
+        $('.scrollContainer').fadeIn(800);
+      }, 200);
+    });
+
+    $(document).ready(function(){
+      $(".responsiveMenuBtn").click(function(){
+        $(".responsiveMenuFrame").fadeIn();
+        $(".responsiveMenuBtn").fadeOut();
+      });
+    });
+    $(document).ready(function(){
+      $("#close").click(function(){
+        $(".responsiveMenuFrame").fadeOut();
+        $(".responsiveMenuBtn").fadeIn();
+      });
+    });
+
+    $(document).ready(function(){
+      $("#responsiveServices").click(function(){
+        $("#serviceSubBtn1").fadeToggle();
+        $("#serviceSubBtn2").fadeToggle();
+      });
+    });
+
+    $(document).ready(function(){
+      $("#responsiveProducts").click(function(){
+        $("#productSubBtn1").fadeToggle();
+      });
+    });
+
+  </script>
+  <script src="https://www.powr.io/powr.js?platform=html"></script>
+  <link rel="icon" type="image/x-icon" href="../../Website/Wpps/favicon.png">
+</head>
+
+<body>
+  <header>
+    <div class="headerButton" id="servicesMainBtn">services</div>
+    <div class="headerButton" id="solutionsMainBtn">solutions</div>
+    <a href="index.html"><div class="headerButton" style="background-image: url('../../Website/Wpps/logo.png'); background-size: 30%; background-position: center; background-repeat: no-repeat; color: white;"></div></a>
+    <div class="headerButton"><a href="portfolio.html">portfolio</a></div>
+    <div class="headerButton"><a href="contactus.html">contact us</a></div>
+
+    <div class="dropMenu" id="serviceMenu">
+      <div class="menuBtn"><a href="blockchain-development.html">Blockchain Development</a></div>
+      <div class="menuBtn"><a href="blockchain-analytics.html">Blockchain Analytics</a></div>
+    </div>
+
+    <div class="dropMenu" id="solutionsMenu">
+      <div class="menuBtn"><a href="nft-api.html">NFT API</a></div>
+    </div>
+  </header>
+
+  <div class="responsiveMenu">
+    <a href="index.html"><div class="responsiveLogo"></div></a>
+    <div class="responsiveMenuBtn">
+      <span style="width:100%; height: 1px; display: block; background-color: white; margin-top: 0px;"></span>
+      <span style="width:100%; height: 1px; display: block; background-color: white; margin-top: 9px;"></span>
+      <span style="width:100%; height: 1px; display: block; background-color: white; margin-top: 9px;"></span>
+    </div>
+  </div>
+
+  <div class="responsiveMenuFrame">
+    <div class="responsiveMenuPanel">
+      <div class="responsiveMenuPanelBtn" id="responsiveServices">Services</div>
+      <div class="responsiveMenuPanelBtn" id="serviceSubBtn1" style="display: none;"><a href="blockchain-analytics.html">Blockchain Analytics</a></div>
+      <div class="responsiveMenuPanelBtn" id="serviceSubBtn2" style="display: none;"><a href="blockchain-development.html">Blockchain Development</a></div>
+      <div class="responsiveMenuPanelBtn" id="responsiveProducts">Products</div>
+      <div class="responsiveMenuPanelBtn" id="productSubBtn1" style="display: none;"><a href="nft-api.html">NFT API</a></div>
+      <div class="responsiveMenuPanelBtn"><a href="portfolio.html">Portfolio</a></div>
+      <div class="responsiveMenuPanelBtn"><a href="contact-us.html">Contact us</a></div>
+      <div class="responsiveMenuPanelBtn" id="close">Close</div>
+    </div>
+  </div>
+
+  <div class="homeFirstPanel">
+    <div class="scrollContainer" style="top:0px; display: none;">
+      <h1 style="position: relative; padding: 20px; margin-top: 150px;">We are on the way of NFTs API release. Follow us to keep track of its development. <br> <br> <a href="contactus.html" style="color: #FF03ED; text-decoration: underline;">Go to contact page.</a> </h1>
+    </div>
+  </div>
+</body>
+</html>

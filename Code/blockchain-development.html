@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>Blockchain Development</title>
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      setTimeout(function(){
+        $('.scrollContainer').fadeIn(800);
+      }, 200);
+    });
+    $(document).ready(function(){
+      $(".responsiveMenuBtn").click(function(){
+        $(".responsiveMenuFrame").fadeIn();
+        $(".responsiveMenuBtn").fadeOut();
+      });
+    });
+    $(document).ready(function(){
+      $("#close").click(function(){
+        $(".responsiveMenuFrame").fadeOut();
+        $(".responsiveMenuBtn").fadeIn();
+      });
+    });
+
+    $(document).ready(function(){
+      $("#responsiveServices").click(function(){
+        $("#serviceSubBtn1").fadeToggle();
+        $("#serviceSubBtn2").fadeToggle();
+      });
+    });
+
+    $(document).ready(function(){
+      $("#responsiveProducts").click(function(){
+        $("#productSubBtn1").fadeToggle();
+      });
+    });
+
+  </script>
+  <script src="https://www.powr.io/powr.js?platform=html"></script>
+  <link rel="icon" type="image/x-icon" href="../../Website/Wpps/favicon.png">
+</head>
+
+<body>
+  <header>
+    <div class="headerButton" id="servicesMainBtn">services</div>
+    <div class="headerButton" id="solutionsMainBtn">solutions</div>
+    <a href="index.html"><div class="headerButton" style="background-image: url('../../Website/Wpps/logo.png'); background-size: 30%; background-position: center; background-repeat: no-repeat; color: white;"></div></a>
+    <div class="headerButton"><a href="portfolio.html">portfolio</a></div>
+    <div class="headerButton"><a href="contactus.html">contact us</a></div>
+
+    <div class="dropMenu" id="serviceMenu">
+      <div class="menuBtn"><a href="blockchain-development.html">Blockchain Development</a></div>
+      <div class="menuBtn"><a href="blockchain-analytics.html">Blockchain Analytics</a></div>
+    </div>
+
+    <div class="dropMenu" id="solutionsMenu">
+      <div class="menuBtn"><a href="nft-api.html">NFT API</a></div>
+    </div>
+  </header>
+
+  <div class="responsiveMenu">
+    <a href="index.html"><div class="responsiveLogo"></div></a>
+    <div class="responsiveMenuBtn">
+      <span style="width:100%; height: 1px; display: block; background-color: white; margin-top: 0px;"></span>
+      <span style="width:100%; height: 1px; display: block; background-color: white; margin-top: 9px;"></span>
+      <span style="width:100%; height: 1px; display: block; background-color: white; margin-top: 9px;"></span>
+    </div>
+  </div>
+
+  <div class="responsiveMenuFrame">
+    <div class="responsiveMenuPanel">
+      <div class="responsiveMenuPanelBtn" id="responsiveServices">Services</div>
+      <div class="responsiveMenuPanelBtn" id="serviceSubBtn1" style="display: none;"><a href="blockchain-analytics.html">Blockchain Analytics</a></div>
+      <div class="responsiveMenuPanelBtn" id="serviceSubBtn2" style="display: none;"><a href="blockchain-development.html">Blockchain Development</a></div>
+      <div class="responsiveMenuPanelBtn" id="responsiveProducts">Products</div>
+      <div class="responsiveMenuPanelBtn" id="productSubBtn1" style="display: none;"><a href="nft-api.html">NFT API</a></div>
+      <div class="responsiveMenuPanelBtn"><a href="portfolio.html">Portfolio</a></div>
+      <div class="responsiveMenuPanelBtn"><a href="contact-us.html">Contact us</a></div>
+      <div class="responsiveMenuPanelBtn" id="close">Close</div>
+    </div>
+  </div>
+
+  <div class="homeSecondPanel" style="top: 0px;">
+    <div class="scrollContainer" style="top:0px; display: none;">
+      <div class="mainImg" style="background-image: url('../../Website/Wpps/development-bg.png'); background-size: 100%; height: 40vh;">
+        <h1>Take your dApp <br> to the next level.</h1>
+      </div>
+      <h1 style="position: relative; padding: 20px; margin-top: 200px;">Any blockchain task perfectly-done.</h1>
+      <div class="iconsPanel">
+        <div class="iconsBig"> <p style="padding: 30px;"><strong>DeFi</strong> <br> <br> Enter the world of Decentralized Finance building your awesome DeFi Platform: let users swap, stake or add liquidity with best tokens available. We can also create your own token and integrate it with your platform for awesome new functionalities.</p></div>
+        <div class="iconsBig"> <p style="padding: 30px;"><strong>NFTs</strong> <br> <br>Create your own NFTs Collection and get value from it. We can customize it and help you to add functionalities in order to create passive incomes and advantages for the holders. We are also able to integrate it with any other already-existing Smart Contract/Platform.</p> </div>
+        <div class="iconsBig"> <p style="padding: 30px;"><strong>Smart Contract</strong> <br> <br>Blockchain is not only NFTs and DeFi. You can use it to keep track of products supply-chain or store data safely. We can develop any other kind of Smart Contract for your business and help you to select the best Blockchain to fit your needs.</p> </div>
+      </div>
+
+      <h1 style="position: relative; padding: 20px; margin-top: 100px; text-align: right;">Low gas fees, high performance.<br>On any blockchain.</h1>
+      <p style="position: relative; padding-left: 100px;padding-right: 100px; line-height: 25px;">Our on-chain App development is based on a single paradigm: optimization. Our goal is to develop highly performing apps without giving up gas fees savings. We know the best techniques for optimizing app operation and we will soon introduce tools based on Artificial Intelligence to save on gas fees. Our deep knowledge of Solidity and Rust allows us to apply our paradigms on any Blockchain: Ethereum, EVMs-compatible (Polygon, Avax, BSC etc...) or even Rust-familiar Blockchain like Solana or Elrond. <img src="../../Website/Wpps/development-wpp.png" width="280px" height="450px" style="position: absolute; top: 50px; left: -120px; z-index: -1;"></p>
+
+      <h1 style="position: relative; padding: 20px; margin-top: 200px;">Our analytics skills to keep track of your project growth.</h1>
+      <p style="position: relative; padding-left: 100px;padding-right: 100px; line-height: 25px;">Any large organization uses their activity data to track their users and activities to better understand the strengths of their business. We can do the same for you: we can develop Blockchain Analytics tools to better understand user behavior and keep track of the growth of your project.</p>
+
+      <h1 style="position: relative; padding: 20px; margin-top: 120px; text-align: center;">We'd love to hear your idea.</h1>
+      <iframe src="https://www.powr.io/contact-form/i/34107602#page" width="100%" height="500px;" style="border: 1px solid black; margin-top:-80px;" scrolling="no"></iframe>
+
+    </div>
+  </div>
+
+</body>
+</html>
