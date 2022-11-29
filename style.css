@@ -292,6 +292,7 @@ a{
     display: none;
   }
   iframe{
+    height: 300px;
     width: 90%;
     overflow: scroll;
     scrolling: yes;
