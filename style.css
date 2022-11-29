@@ -303,7 +303,7 @@ a{
     -o-transform-origin: 0 0;
     -webkit-transform: scale(0.75);
     -webkit-transform-origin: 0 0;
-
+    border: 1px solid red;
   }
   .responsiveMenu{
     display: block;
