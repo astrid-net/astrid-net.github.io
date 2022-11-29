@@ -13,10 +13,7 @@ p{
   font-size: 16px;
   color: white;
 }
-iframe{
-  padding-top: 100%;
-  padding-bottom: 100%;
-}
+
 header{
   position: fixed;
   width: 800px;
