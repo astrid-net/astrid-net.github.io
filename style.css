@@ -335,10 +335,21 @@ a{
   .homePanel{
     position: absolute;
     width: 98%;
-    height: 370px;
+    height: 400px;
     top: 40%;
     left: 1%;
     margin-left: 0px;
+  }
+  .imgSlide{
+    position: absolute;
+    width: 90%;
+    height: 90%;
+    top: 5%;
+    left: 5%;
+    background-image: url("Wpps/animation.gif");
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;  
   }
 
 }
