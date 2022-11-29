@@ -4,6 +4,7 @@ body{
   overflow: hidden;
 }
 iframe{
+  height: 500px;
   width: 100%;
   overflow: hidden;
 }
