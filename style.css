@@ -288,7 +288,9 @@ a{
     display: none;
   }
   iframe{
-  overflow-y: scroll;
+    width: 90%;
+    overflow-y: scroll;
+    scrolling: yes;
   }
   .responsiveMenu{
     display: block;
@@ -305,9 +307,7 @@ a{
     background-image: url("");
     margin-bottom: 10px;
   }
-  iframe{
-    width: 90%;
-  }
+
   .homePanel{
     position: absolute;
     width: 400px;
