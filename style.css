@@ -299,11 +299,14 @@ a{
     margin-left: 5%;
   }
   .iconsBig{
-    width: 80%;
+    width: 90%;
     height: auto;
     background-size: 80%;
     background-image: url("");
     margin-bottom: 10px;
+  }
+  iframe{
+    width: 90%;
   }
   .homePanel{
     position: absolute;
