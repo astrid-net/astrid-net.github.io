@@ -3,6 +3,10 @@ body{
   background-color: black;
   overflow: hidden;
 }
+iframe{
+  width: 100%;
+  overflow: hidden;
+}
 h1{
   font-family: 'Questrial', sans-serif;
   font-size: 40px;
@@ -289,7 +293,7 @@ a{
   }
   iframe{
     width: 90%;
-    overflow-y: scroll;
+    overflow: scroll;
     scrolling: yes;
   }
   .responsiveMenu{
