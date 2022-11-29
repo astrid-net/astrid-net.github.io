@@ -287,6 +287,9 @@ a{
   header {
     display: none;
   }
+  iframe{
+  overflow-y: scroll;
+  }
   .responsiveMenu{
     display: block;
   }
@@ -332,9 +335,10 @@ a{
   .homePanel{
     position: absolute;
     width: 98%;
-    height: 400px;
+    height: 370px;
     top: 40%;
     left: 1%;
     margin-left: 0px;
   }
+
 }
