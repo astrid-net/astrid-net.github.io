@@ -3,11 +3,7 @@ body{
   background-color: black;
   overflow: hidden;
 }
-iframe{
-  height: 500px;
-  width: 100%;
-  overflow: hidden;
-}
+
 h1{
   font-family: 'Questrial', sans-serif;
   font-size: 40px;
@@ -265,6 +261,25 @@ a{
   font-family: 'Questrial', sans-serif;
   color: white;
 }
+.contactUs{
+  display: none;
+  position: relative;
+  border: 1px solid #FF03ED;
+  padding: 20px;
+  color: #FF03ED;
+  font-family: 'Questrial', sans-serif;
+  left: 50%;
+  margin-left: -80px;
+  width: 135px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+.contactUs:hover{
+  background-color: #FF03ED;
+  color: white;
+}
 .textInfos{
   width: 35%;
   height: 100%;
@@ -320,7 +335,12 @@ a{
     background-image: url("");
     margin-bottom: 10px;
   }
-
+  .contactUs{
+    display: block;
+  }
+  iframe{
+    display: none;
+  }
   .homePanel{
     position: absolute;
     width: 400px;
