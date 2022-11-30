@@ -185,14 +185,14 @@ a{
   position: absolute;
   width: 350px;
   left: 50%;
-  margin-left: -150px;
+  margin-left: -175px;
   bottom: 0;
 }
 .switchPanelButton{
   display: inline-block;
   width: 100%;
   padding-top: 10px;
-  padding-bottom: 20px;
+  padding-bottom: 10px;
   text-align: center;
   cursor: pointer;
 }
