@@ -355,7 +355,6 @@ a{
     width: 90%;
     height: auto;
     background-size: 80%;
-    background-image: url("");
     margin-bottom: 10px;
   }
   .contactUs{
@@ -379,13 +378,11 @@ a{
   .textInfos{
     width: 100%;
     height: auto;
-    background-color: green;
     display: inline-block;
     margin: 0;
   }
   .imgInfo{
     width: 100%;
-    background-color: blue;
     display: inline-block;
     margin: 0;
   }
