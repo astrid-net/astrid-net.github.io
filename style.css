@@ -26,6 +26,20 @@ header{
   background-color: black;
   z-index: 1000;
 }
+footer{
+  display: inline-block;
+  width: 700px;
+  margin-top: 50px;
+  border-top: 1px solid white;
+}
+.footerSection{
+  display: inline-block;
+  height: 200px;
+  width: 30%;
+  margin: 0;
+  vertical-align: middle;
+  padding: 10px;
+}
 a{
   color: inherit;
   text-decoration: none;
@@ -307,6 +321,14 @@ a{
   header {
     display: none;
   }
+  footer{
+    width: 90vw;
+  }
+  .footerSection{
+    width: 100%;
+    height: auto;
+  }
+
   iframe{
     width: 90%;
     overflow: scroll;
