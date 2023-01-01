@@ -1,1 +1,1 @@
-# A company specialized in Blockchain Development&Analytics.
+# Astrid is a company which aim is to offer a wide range of decentralized products empowered by Data Science.
