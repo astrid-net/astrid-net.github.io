@@ -1,99 +1,115 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
 <head>
-  <meta charset="utf-8">
-  <title>NFT API</title>
-  <link rel="stylesheet" href="style.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script>
-    $(document).ready(function(){
-      setTimeout(function(){
-        $('.scrollContainer').fadeIn(800);
-      }, 200);
-    });
+    <meta charset="utf-8">
+    <title>NFT API</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            setTimeout(function() {
+                $('.scrollContainer').fadeIn(800);
+            }, 200);
+        });
 
-    $(document).ready(function(){
-      $(".responsiveMenuBtn").click(function(){
-        $(".responsiveMenuFrame").fadeIn();
-        $(".responsiveMenuBtn").fadeOut();
-      });
-    });
-    $(document).ready(function(){
-      $("#close").click(function(){
-        $(".responsiveMenuFrame").fadeOut();
-        $(".responsiveMenuBtn").fadeIn();
-      });
-    });
+        $(document).ready(function() {
+            $(".responsiveMenuBtn").click(function() {
+                $(".responsiveMenuFrame").fadeIn();
+                $(".responsiveMenuBtn").fadeOut();
+            });
+        });
+        $(document).ready(function() {
+            $("#close").click(function() {
+                $(".responsiveMenuFrame").fadeOut();
+                $(".responsiveMenuBtn").fadeIn();
+            });
+        });
 
-    $(document).ready(function(){
-      $("#responsiveServices").click(function(){
-        $("#serviceSubBtn1").fadeToggle();
-        $("#serviceSubBtn2").fadeToggle();
-      });
-    });
+        $(document).ready(function() {
+            $("#responsiveServices").click(function() {
+                $("#serviceSubBtn1").fadeToggle();
+                $("#serviceSubBtn2").fadeToggle();
+                $("#serviceSubBtn3").fadeToggle();
+            });
+        });
 
-    $(document).ready(function(){
-      $("#responsiveProducts").click(function(){
-        $("#productSubBtn1").fadeToggle();
-      });
-    });
-
-  </script>
-  <script src="https://www.powr.io/powr.js?platform=html"></script>
-  <link rel="icon" type="image/x-icon" href="Wpps/favicon.png">
+        $(document).ready(function() {
+            $("#responsiveProducts").click(function() {
+                $("#productSubBtn1").fadeToggle();
+            });
+        });
+    </script>
+    <script src="https://www.powr.io/powr.js?platform=html"></script>
+    <link rel="icon" type="image/x-icon" href="Wpps/favicon.png">
 </head>
 
 <body>
-  <header>
-    <div class="headerButton" id="servicesMainBtn">services</div>
-    <div class="headerButton" id="solutionsMainBtn">solutions</div>
-    <a href="index.html"><div class="headerButton" style="background-image: url('Wpps/logo.png'); background-size: 30%; background-position: center; background-repeat: no-repeat; color: white;"></div></a>
-    <div class="headerButton"><a href="portfolio.html">portfolio</a></div>
-    <div class="headerButton"><a href="contactus.html">contact us</a></div>
+    <header>
+        <div class="headerButton" id="servicesMainBtn">services</div>
+        <div class="headerButton" id="solutionsMainBtn">solutions</div>
+        <a href="index.html">
+            <div class="headerButton" style="background-image: url('Wpps/logo.png'); background-size: 30%; background-position: center; background-repeat: no-repeat; color: white;"></div>
+        </a>
+        <div class="headerButton"><a href="portfolio.html">portfolio</a></div>
+        <div class="headerButton"><a href="contactus.html">contact us</a></div>
 
-    <div class="dropMenu" id="serviceMenu">
-      <div class="menuBtn"><a href="blockchain-development.html">Blockchain Development</a></div>
-      <div class="menuBtn"><a href="blockchain-analytics.html">Blockchain Analytics</a></div>
+        <div class="dropMenu" id="serviceMenu">
+            <div class="menuBtn"><a href="blockchain-development.html">Blockchain Development</a></div>
+            <div class="menuBtn"><a href="blockchain-analytics.html">Blockchain Analytics</a></div>
+            <div class="menuBtn"><a href="blockchain-ai.html">Blockchain AI</a></div>
+        </div>
+
+        <div class="dropMenu" id="solutionsMenu">
+            <div class="menuBtn"><a href="nft-api.html">NFT API</a></div>
+        </div>
+    </header>
+
+    <div class="responsiveMenu">
+        <a href="index.html">
+            <div class="responsiveLogo" style="background-image: url('Wpps/logo.png');"></div>
+        </a>
+        <div class="responsiveMenuBtn">
+            <span style="width:100%; height: 1px; display: block; background-color: white; margin-top: 0px;"></span>
+            <span style="width:100%; height: 1px; display: block; background-color: white; margin-top: 9px;"></span>
+            <span style="width:100%; height: 1px; display: block; background-color: white; margin-top: 9px;"></span>
+        </div>
     </div>
 
-    <div class="dropMenu" id="solutionsMenu">
-      <div class="menuBtn"><a href="nft-api.html">NFT API</a></div>
+    <div class="responsiveMenuFrame">
+        <div class="responsiveMenuPanel">
+            <div class="responsiveMenuPanelBtn" id="responsiveServices">Services</div>
+            <div class="responsiveMenuPanelBtn" id="serviceSubBtn1" style="display: none;"><a href="blockchain-analytics.html">Blockchain Analytics</a></div>
+            <div class="responsiveMenuPanelBtn" id="serviceSubBtn2" style="display: none;"><a href="blockchain-development.html">Blockchain Development</a></div>
+            <div class="responsiveMenuPanelBtn" id="serviceSubBtn3" style="display: none;"><a href="blockchain-ai.html">Blockchain AI</a></div>
+            <div class="responsiveMenuPanelBtn" id="responsiveProducts">Products</div>
+            <div class="responsiveMenuPanelBtn" id="productSubBtn1" style="display: none;"><a href="nft-api.html">NFT API</a></div>
+            <div class="responsiveMenuPanelBtn"><a href="portfolio.html">Portfolio</a></div>
+            <div class="responsiveMenuPanelBtn"><a href="contactus.html">Contact us</a></div>
+            <div class="responsiveMenuPanelBtn" id="close">Close</div>
+        </div>
     </div>
-  </header>
 
-  <div class="responsiveMenu">
-    <a href="index.html"><div class="responsiveLogo" style="background-image: url('Wpps/logo.png');"></div></a>
-    <div class="responsiveMenuBtn">
-      <span style="width:100%; height: 1px; display: block; background-color: white; margin-top: 0px;"></span>
-      <span style="width:100%; height: 1px; display: block; background-color: white; margin-top: 9px;"></span>
-      <span style="width:100%; height: 1px; display: block; background-color: white; margin-top: 9px;"></span>
-    </div>
-  </div>
-
-  <div class="responsiveMenuFrame">
-    <div class="responsiveMenuPanel">
-      <div class="responsiveMenuPanelBtn" id="responsiveServices">Services</div>
-      <div class="responsiveMenuPanelBtn" id="serviceSubBtn1" style="display: none;"><a href="blockchain-analytics.html">Blockchain Analytics</a></div>
-      <div class="responsiveMenuPanelBtn" id="serviceSubBtn2" style="display: none;"><a href="blockchain-development.html">Blockchain Development</a></div>
-      <div class="responsiveMenuPanelBtn" id="responsiveProducts">Products</div>
-      <div class="responsiveMenuPanelBtn" id="productSubBtn1" style="display: none;"><a href="nft-api.html">NFT API</a></div>
-      <div class="responsiveMenuPanelBtn"><a href="portfolio.html">Portfolio</a></div>
-      <div class="responsiveMenuPanelBtn"><a href="contactus.html">Contact us</a></div>
-      <div class="responsiveMenuPanelBtn" id="close">Close</div>
-    </div>
-  </div>
-
-  <div class="homeFirstPanel" style="overflow-y: auto;">
-    <div class="scrollContainer" style="top:0px; display: none;">
-      <h1 style="position: relative; padding: 20px; margin-top: 150px;">We are on the way of NFTs API release. Follow us to keep track of its development. <br> <br> <a href="contactus.html" style="color: #FF03ED; text-decoration: underline;">Go to contact page.</a> </h1>
-      <footer>
-        <div class="footerSection"> <div class="headerButton" style="height: 60px; width: 60px; background-image: url('Wpps/logo.png'); background-size: 90%; background-position: center; background-repeat: no-repeat; color: white;"></div> <p style="font-size: 13px;">Shape future of blockchain with data. <br><br>  51 Pleasant St # 887, Malden, MA 02148, United States  <br> All rights are reserved.</p></div>
-        <div class="footerSection"> <p style="font-size: 13px;"> <span style="font-size: 18px;">SiteMap</span> <br> <br> <a href="blockchain-analytics.html">Blockchain Analytics</a> <br> <a href="blockchain-development.html">Blockchain Development</a> <br> <a href="nft-api.html">NFTs API</a> <br> <a href="portfolio.html">Portfolio</a> </p> </div>
-        <div class="footerSection"> <p style="font-size: 13px;"> <span style="font-size: 18px;">Contacts</span> <br> <br> <a href="contactus.html">Contact us</a> <br> <a href="https://twitter.com/astrid_net">Twitter</a> <br> <a href="https://t.me/gicappaemme">Telegram</a> <br> <a href="https://discord.com/users/809888220182741022">Discord</a> </p> </div></div>
-      </footer>
+    <div class="homeFirstPanel" style="overflow-y: auto;">
+        <div class="scrollContainer" style="top:0px; display: none;">
+            <h1 style="position: relative; padding: 20px; margin-top: 150px;">We are on the way of NFTs API release. Follow us to keep track of its development. <br> <br> <a href="contactus.html" style="color: #FF03ED; text-decoration: underline;">Go to contact page.</a> </h1>
+            <footer>
+                <div class="footerSection">
+                    <div class="headerButton" style="height: 60px; width: 60px; background-image: url('Wpps/logo.png'); background-size: 90%; background-position: center; background-repeat: no-repeat; color: white;"></div>
+                    <p style="font-size: 13px;">Shape future of blockchain with data. <br><br> 51 Pleasant St # 887, Malden, MA 02148, United States <br> All rights are reserved.</p>
+                </div>
+                <div class="footerSection">
+                    <p style="font-size: 13px;"> <span style="font-size: 18px;">SiteMap</span> <br> <br> <a href="blockchain-analytics.html">Blockchain Analytics</a> <br> <a href="blockchain-development.html">Blockchain Development</a> <br><a href="blockchain-ai.html">Blockchain AI</a>                        <br> <a href="nft-api.html">NFTs API</a> <br> <a href="portfolio.html">Portfolio</a> </p>
+                </div>
+                <div class="footerSection">
+                    <p style="font-size: 13px;"> <span style="font-size: 18px;">Contacts</span> <br> <br> <a href="contactus.html">Contact us</a> <br> <a href="https://twitter.com/astrid_net">Twitter</a> <br> <a href="https://t.me/gicappaemme">Telegram</a> <br> <a href="https://discord.com/users/809888220182741022">Discord</a>                        </p>
+                </div>
+        </div>
+        </footer>
 
     </div>
-  </div>
+    </div>
 </body>
+
 </html>

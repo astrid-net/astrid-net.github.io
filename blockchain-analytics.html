@@ -1,117 +1,139 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
 <head>
-  <meta charset="utf-8">
-  <title>Blockchain Analytics</title>
-  <link rel="stylesheet" href="style.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script>
-    $(document).ready(function(){
-      setTimeout(function(){
-        $('.scrollContainer').fadeIn(800);
-      }, 200);
-    });
-    $(document).ready(function(){
-      $(".responsiveMenuBtn").click(function(){
-        $(".responsiveMenuFrame").fadeIn();
-        $(".responsiveMenuBtn").fadeOut();
-      });
-    });
-    $(document).ready(function(){
-      $("#close").click(function(){
-        $(".responsiveMenuFrame").fadeOut();
-        $(".responsiveMenuBtn").fadeIn();
-      });
-    });
+    <meta charset="utf-8">
+    <title>Blockchain Analytics</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            setTimeout(function() {
+                $('.scrollContainer').fadeIn(800);
+            }, 200);
+        });
+        $(document).ready(function() {
+            $(".responsiveMenuBtn").click(function() {
+                $(".responsiveMenuFrame").fadeIn();
+                $(".responsiveMenuBtn").fadeOut();
+            });
+        });
+        $(document).ready(function() {
+            $("#close").click(function() {
+                $(".responsiveMenuFrame").fadeOut();
+                $(".responsiveMenuBtn").fadeIn();
+            });
+        });
 
-    $(document).ready(function(){
-      $("#responsiveServices").click(function(){
-        $("#serviceSubBtn1").fadeToggle();
-        $("#serviceSubBtn2").fadeToggle();
-      });
-    });
+        $(document).ready(function() {
+            $("#responsiveServices").click(function() {
+                $("#serviceSubBtn1").fadeToggle();
+                $("#serviceSubBtn2").fadeToggle();
+                $("#serviceSubBtn3").fadeToggle();
+            });
+        });
 
-    $(document).ready(function(){
-      $("#responsiveProducts").click(function(){
-        $("#productSubBtn1").fadeToggle();
-      });
-    });
-
-  </script>
-  <script src="https://www.powr.io/powr.js?platform=html"></script>
-  <link rel="icon" type="image/x-icon" href="Wpps/favicon.png">
+        $(document).ready(function() {
+            $("#responsiveProducts").click(function() {
+                $("#productSubBtn1").fadeToggle();
+            });
+        });
+    </script>
+    <script src="https://www.powr.io/powr.js?platform=html"></script>
+    <link rel="icon" type="image/x-icon" href="Wpps/favicon.png">
 </head>
 
 <body>
-  <header>
-    <div class="headerButton" id="servicesMainBtn">services</div>
-    <div class="headerButton" id="solutionsMainBtn">solutions</div>
-    <a href="index.html"><div class="headerButton" style="background-image: url('Wpps/logo.png'); background-size: 30%; background-position: center; background-repeat: no-repeat; color: white;"></div></a>
-    <div class="headerButton"><a href="portfolio.html">portfolio</a></div>
-    <div class="headerButton"><a href="contactus.html">contact us</a></div>
+    <header>
+        <div class="headerButton" id="servicesMainBtn">services</div>
+        <div class="headerButton" id="solutionsMainBtn">solutions</div>
+        <a href="index.html">
+            <div class="headerButton" style="background-image: url('Wpps/logo.png'); background-size: 30%; background-position: center; background-repeat: no-repeat; color: white;"></div>
+        </a>
+        <div class="headerButton"><a href="portfolio.html">portfolio</a></div>
+        <div class="headerButton"><a href="contactus.html">contact us</a></div>
 
-    <div class="dropMenu" id="serviceMenu">
-      <div class="menuBtn"><a href="blockchain-development.html">Blockchain Development</a></div>
-      <div class="menuBtn"><a href="blockchain-analytics.html">Blockchain Analytics</a></div>
+        <div class="dropMenu" id="serviceMenu">
+            <div class="menuBtn"><a href="blockchain-development.html">Blockchain Development</a></div>
+            <div class="menuBtn"><a href="blockchain-analytics.html">Blockchain Analytics</a></div>
+            <div class="menuBtn"><a href="blockchain-ai.html">Blockchain AI</a></div>
+        </div>
+
+        <div class="dropMenu" id="solutionsMenu">
+            <div class="menuBtn"><a href="nft-api.html">NFT API</a></div>
+        </div>
+    </header>
+
+    <div class="responsiveMenu">
+        <a href="index.html">
+            <div class="responsiveLogo" style="background-image: url('Wpps/logo.png');"></div>
+        </a>
+        <div class="responsiveMenuBtn">
+            <span style="width:100%; height: 1px; display: block; background-color: white; margin-top: 0px;"></span>
+            <span style="width:100%; height: 1px; display: block; background-color: white; margin-top: 9px;"></span>
+            <span style="width:100%; height: 1px; display: block; background-color: white; margin-top: 9px;"></span>
+        </div>
     </div>
 
-    <div class="dropMenu" id="solutionsMenu">
-      <div class="menuBtn"><a href="nft-api.html">NFT API</a></div>
+    <div class="responsiveMenuFrame">
+        <div class="responsiveMenuPanel">
+            <div class="responsiveMenuPanelBtn" id="responsiveServices">Services</div>
+            <div class="responsiveMenuPanelBtn" id="serviceSubBtn1" style="display: none;"><a href="blockchain-analytics.html">Blockchain Analytics</a></div>
+            <div class="responsiveMenuPanelBtn" id="serviceSubBtn2" style="display: none;"><a href="blockchain-development.html">Blockchain Development</a></div>
+            <div class="responsiveMenuPanelBtn" id="serviceSubBtn3" style="display: none;"><a href="blockchain-ai.html">Blockchain AI</a></div>
+            <div class="responsiveMenuPanelBtn" id="responsiveProducts">Products</div>
+            <div class="responsiveMenuPanelBtn" id="productSubBtn1" style="display: none;"><a href="nft-api.html">NFT API</a></div>
+            <div class="responsiveMenuPanelBtn"><a href="portfolio.html">Portfolio</a></div>
+            <div class="responsiveMenuPanelBtn"><a href="contactus.html">Contact us</a></div>
+            <div class="responsiveMenuPanelBtn" id="close">Close</div>
+        </div>
     </div>
-  </header>
 
-  <div class="responsiveMenu">
-    <a href="index.html"><div class="responsiveLogo" style="background-image: url('Wpps/logo.png');"></div></a>
-    <div class="responsiveMenuBtn">
-      <span style="width:100%; height: 1px; display: block; background-color: white; margin-top: 0px;"></span>
-      <span style="width:100%; height: 1px; display: block; background-color: white; margin-top: 9px;"></span>
-      <span style="width:100%; height: 1px; display: block; background-color: white; margin-top: 9px;"></span>
-    </div>
-  </div>
+    <div class="homeSecondPanel" style="top: 0px;">
+        <div class="scrollContainer" style="top:0px; display: none;">
+            <div class="mainImg" style="background-image: url('Wpps/shape6.png')">
+                <h1>Get values from blockchain data.</h1>
+            </div>
+            <h1 style="position: relative; padding: 20px; margin-top: 100px;">Any data from <br> any Blockchain.</h1>
+            <p style="position: relative; padding-left: 50px; padding-right: 100px; line-height: 25px;">Need a stats-packed landing page for your NFT collection? or to extract metadata of any other collection? Do you need an analytics tool for your DeFi platform? We can do anything about on-chain data mining using the best data mining techniques.
+                We are able to create scripts to communicate with blockchain nodes, fetch and decode transactions. We can also create crawlers or bots to extract the most difficult to obtain data. <img src="Wpps/analytics-wpp.png" width="400px" height="450px"
+                    style="position: absolute; top: 50px; right: -150px; z-index: -1;"></p>
 
-  <div class="responsiveMenuFrame">
-    <div class="responsiveMenuPanel">
-      <div class="responsiveMenuPanelBtn" id="responsiveServices">Services</div>
-      <div class="responsiveMenuPanelBtn" id="serviceSubBtn1" style="display: none;"><a href="blockchain-analytics.html">Blockchain Analytics</a></div>
-      <div class="responsiveMenuPanelBtn" id="serviceSubBtn2" style="display: none;"><a href="blockchain-development.html">Blockchain Development</a></div>
-      <div class="responsiveMenuPanelBtn" id="responsiveProducts">Products</div>
-      <div class="responsiveMenuPanelBtn" id="productSubBtn1" style="display: none;"><a href="nft-api.html">NFT API</a></div>
-      <div class="responsiveMenuPanelBtn"><a href="portfolio.html">Portfolio</a></div>
-      <div class="responsiveMenuPanelBtn"><a href="contactus.html">Contact us</a></div>
-      <div class="responsiveMenuPanelBtn" id="close">Close</div>
-    </div>
-  </div>
+            <h1 style="position: relative; padding: 20px; margin-top: 200px;">Get all stats <br> you need.</h1>
+            <p style="position: relative; padding-left: 50px;padding-right: 100px; line-height: 25px;">We are expert Data Scientists. Through our skills we can give meaning to the data we extract. We can build graphs, correlation matrices, identify data trends, clusters and create accurate prediction models for any of your needs. For example,
+                we could extract data on the activity of your DeFi protocol and create a Deep Learning model capable of clustering and predicting user behavior to recognize the most frequent patterns of use of your platform in the present and also in
+                the future. This is just an idea, contact us to learn more about your case study. <img src="Wpps/analytics-wpp2.png" width="400px" height="450px" style="position: absolute; top: 100px; left: -120px; z-index: -1;"></p>
 
-  <div class="homeSecondPanel" style="top: 0px;">
-    <div class="scrollContainer" style="top:0px; display: none;">
-      <div class="mainImg" style="background-image: url('Wpps/shape6.png')">
-        <h1>Get values from blockchain data.</h1>
-      </div>
-      <h1 style="position: relative; padding: 20px; margin-top: 100px;">Any data from <br> any Blockchain.</h1>
-      <p style="position: relative; padding-left: 50px; padding-right: 100px; line-height: 25px;">Need a stats-packed landing page for your NFT collection? or to extract metadata of any other collection? Do you need an analytics tool for your DeFi platform? We can do anything about on-chain data mining using the best data mining techniques. We are able to create scripts to communicate with blockchain nodes, fetch and decode transactions. We can also create crawlers or bots to extract the most difficult to obtain data. <img src="Wpps/analytics-wpp.png" width="400px" height="450px" style="position: absolute; top: 50px; right: -150px; z-index: -1;"></p>
+            <h1 style="position: relative; padding: 20px; margin-top: 200px;">Get data delivered <br>or displayed as you prefer.</h1>
+            <p style="position: relative; padding-left: 50px;padding-right: 100px; line-height: 25px;">We can show data and statistics in the way you prefer: via awesome User Interface, in the most common file formats such as CSV, or even provide updated data in real-time via the API Rest protocol. We can listen to your needs and help you find
+                the best solution.</p>
 
-      <h1 style="position: relative; padding: 20px; margin-top: 200px;">Get all stats <br> you need.</h1>
-      <p style="position: relative; padding-left: 50px;padding-right: 100px; line-height: 25px;">We are expert Data Scientists. Through our skills we can give meaning to the data we extract. We can build graphs, correlation matrices, identify data trends, clusters and create accurate prediction models for any of your needs. For example,
-we could extract data on the activity of your DeFi protocol and create a Deep Learning model capable of clustering and predicting user behavior to recognize the most frequent patterns of use of your platform in the present and also in the future. This is just an idea, contact us to learn more about your case study. <img src="Wpps/analytics-wpp2.png" width="400px" height="450px" style="position: absolute; top: 100px; left: -120px; z-index: -1;"></p>
+            <h1 style="position: relative; padding: 20px; margin-top: 120px; text-align: center;">We'd love to hear your idea.</h1>
+            <iframe src="https://www.powr.io/contact-form/i/34107602#page" width="100%" height="500px;" style="border: 1px solid black; margin-bottom: 50px;" scrolling="no"></iframe>
+            <a href="https://www.powr.io/contact-form/i/34107602#page">
+                <div class="contactUs">contact form page</div>
+            </a>
 
-      <h1 style="position: relative; padding: 20px; margin-top: 200px;">Get data delivered <br>or displayed as you prefer.</h1>
-      <p style="position: relative; padding-left: 50px;padding-right: 100px; line-height: 25px;">We can show data and statistics in the way you prefer: via awesome User Interface, in the most common file formats such as CSV, or even provide updated data in real-time via the API Rest protocol. We can listen to your needs and help you find the best solution.</p>
 
-      <h1 style="position: relative; padding: 20px; margin-top: 120px; text-align: center;">We'd love to hear your idea.</h1>
-      <iframe src="https://www.powr.io/contact-form/i/34107602#page" width="100%" height="500px;" style="border: 1px solid black; margin-bottom: 50px;" scrolling="no"></iframe>
-      <a href="https://www.powr.io/contact-form/i/34107602#page"><div class="contactUs">contact form page</div></a>
-
-      
-      <footer>
-        <div class="footerSection"> <div class="headerButton" style="height: 60px; width: 60px; background-image: url('Wpps/logo.png'); background-size: 90%; background-position: center; background-repeat: no-repeat; color: white;"></div> <p style="font-size: 13px;">Shape future of blockchain with data. <br><br>  51 Pleasant St # 887, Malden, MA 02148, United States  <br> All rights are reserved.</p></div>
-        <div class="footerSection"> <p style="font-size: 13px;"> <span style="font-size: 18px;">SiteMap</span> <br> <br> <a href="blockchain-analytics.html">Blockchain Analytics</a> <br> <a href="blockchain-development.html">Blockchain Development</a> <br> <a href="nft-api.html">NFTs API</a> <br> <a href="portfolio.html">Portfolio</a> </p> </div>
-        <div class="footerSection"> <p style="font-size: 13px;"> <span style="font-size: 18px;">Contacts</span> <br> <br> <a href="contactus.html">Contact us</a> <br> <a href="https://twitter.com/astrid_net">Twitter</a> <br> <a href="https://t.me/gicappaemme">Telegram</a> <br> <a href="https://discord.com/users/809888220182741022">Discord</a> </p> </div></div>
-      </footer>
+            <footer>
+                <div class="footerSection">
+                    <div class="headerButton" style="height: 60px; width: 60px; background-image: url('Wpps/logo.png'); background-size: 90%; background-position: center; background-repeat: no-repeat; color: white;"></div>
+                    <p style="font-size: 13px;">Shape future of blockchain with data. <br><br> 51 Pleasant St # 887, Malden, MA 02148, United States <br> All rights are reserved.</p>
+                </div>
+                <div class="footerSection">
+                    <p style="font-size: 13px;"> <span style="font-size: 18px;">SiteMap</span> <br> <br> <a href="blockchain-analytics.html">Blockchain Analytics</a> <br> <a href="blockchain-development.html">Blockchain Development</a> <br><a href="blockchain-ai.html">Blockchain AI</a><br>                        <a href="nft-api.html">NFTs API</a> <br> <a href="portfolio.html">Portfolio</a></p>
+                </div>
+                <div class="footerSection">
+                    <p style="font-size: 13px;"> <span style="font-size: 18px;">Contacts</span> <br> <br> <a href="contactus.html">Contact us</a> <br> <a href="https://twitter.com/astrid_net">Twitter</a> <br> <a href="https://t.me/gicappaemme">Telegram</a> <br> <a href="https://discord.com/users/809888220182741022">Discord</a>                        </p>
+                </div>
+        </div>
+        </footer>
 
 
     </div>
-  </div>
+    </div>
 
 </body>
+
 </html>
