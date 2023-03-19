@@ -3,18 +3,16 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Home</title>
+    <title>Blockchain AI</title>
     <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>
         $(document).ready(function() {
-            $(".switchPanelButton").click(function() {
-                $(".homeFirstPanel").css("top", "-100%");
-                $(".homeSecondPanel").css("top", "0%");
-            });
+            setTimeout(function() {
+                $('.scrollContainer').fadeIn(800);
+            }, 200);
         });
-
         $(document).ready(function() {
             $(".responsiveMenuBtn").click(function() {
                 $(".responsiveMenuFrame").fadeIn();
@@ -47,7 +45,6 @@
 </head>
 
 <body>
-
     <header>
         <div class="headerButton" id="servicesMainBtn">services</div>
         <div class="headerButton" id="solutionsMainBtn">solutions</div>
@@ -64,7 +61,7 @@
         </div>
 
         <div class="dropMenu" id="solutionsMenu">
-            <div class="menuBtn"><a href="nft-api.html">NFT API</a></div>
+            <div class="menuBtn"><a href="gasfee-predictor.html">Gas Fee Predictor</a></div>
         </div>
     </header>
 
@@ -86,27 +83,10 @@
             <div class="responsiveMenuPanelBtn" id="serviceSubBtn2" style="display: none;"><a href="blockchain-development.html">Blockchain Development</a></div>
             <div class="responsiveMenuPanelBtn" id="serviceSubBtn3" style="display: none;"><a href="blockchain-ai.html">Blockchain AI</a></div>
             <div class="responsiveMenuPanelBtn" id="responsiveProducts">Products</div>
-            <div class="responsiveMenuPanelBtn" id="productSubBtn1" style="display: none;"><a href="nft-api.html">NFT API</a></div>
+            <div class="responsiveMenuPanelBtn" id="productSubBtn1" style="display: none;"><a href="gasfee-predictor.html">Gas Fee Predictor</a></div>
             <div class="responsiveMenuPanelBtn"><a href="portfolio.html">Portfolio</a></div>
             <div class="responsiveMenuPanelBtn"><a href="contactus.html">Contact us</a></div>
             <div class="responsiveMenuPanelBtn" id="close">Close</div>
-        </div>
-    </div>
-
-    <div class="homeFirstPanel">
-
-        <div class="homePanel">
-            <div class="imgSlide" style="background-image: url('Wpps/animation.gif');">
-                <strong><h1 style="text-align: center; margin-top: 40%;">Decentralized solutions empowered by Data Science.</h1></strong>
-            </div>
-        </div>
-
-        <div class="bottomPanel">
-            <p style="font-family: 'Questrial', sans-serif; text-align: center; line-height: 30px; font-size: 14px;">Astrid is a team of Blockchain Developers and Data Scientists offering a wide range of customised services related to Blockchain and Artificial Intelligence.</p>
-            <div class="switchPanelButton">
-                <p style="color: #FF03ED;font-family: 'Questrial', sans-serif;">Show More &#8595
-                </p>
-            </div>
         </div>
     </div>
 
