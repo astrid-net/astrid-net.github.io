@@ -10,4 +10,4 @@ Blockchain Analytics: Astrid's data-driven approach allows us to retrieve and an
 
 Blockchain AI: By combining the latest advancements in artificial intelligence and blockchain technology, our team develops powerful AI models to optimize and empower your blockchain workflows. This enables you to streamline processes, enhance security, and stay ahead of the competition in an ever-evolving industry.
 
-Together, we empower businesses to break the boundaries of traditional systems and embrace the future of decentralization with Astrid's end-to-end blockchain solutions.
+Together, we empower businesses to break the boundaries of traditional systems and embrace the future of decentralization with Astrid's end-to-end blockchain solutions. Visit our website https://www.astrid.network/ to know more about our skills, partnerships and portfolio.
