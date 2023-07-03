@@ -1,155 +1,571 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Home</title>
-    <link rel="stylesheet" href="style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script>
-      $(document).ready(function(){
-        $(".switchPanelButton").click(function(){
-          $(".homeFirstPanel").css("top","-100%");
-          $(".homeSecondPanel").css("top","0%");
-        });
-      });
+	<head>
+		<meta charset="utf-8" />
+		<title>Home</title>
+		<link rel="stylesheet" href="style.css" />
+		<link rel="stylesheet" href="./css/index.css" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<link rel="icon" type="image/x-icon" href="Wpps/favicon.png" />
+	</head>
+	<body>
+		<header>
+			<div class="headerButton" id="servicesMainBtn">consulting</div>
+			<div class="headerButton" id="solutionsMainBtn">solutions</div>
+			<a href="index.html"
+				><div
+					class="headerButton"
+					style="
+						background-image: url('Wpps/logo.png');
+						background-size: 30%;
+						background-position: center;
+						background-repeat: no-repeat;
+						color: white;
+					"
+				></div
+			></a>
+			<div class="headerButton">
+				<a href="portfolio.html">portfolio</a>
+			</div>
+			<div class="headerButton">
+				<a href="contactus.html">contact us</a>
+			</div>
 
-      $(document).ready(function(){
-        $(".responsiveMenuBtn").click(function(){
-          $(".responsiveMenuFrame").fadeIn();
-          $(".responsiveMenuBtn").fadeOut();
-        });
-      });
-      $(document).ready(function(){
-        $("#close").click(function(){
-          $(".responsiveMenuFrame").fadeOut();
-          $(".responsiveMenuBtn").fadeIn();
-        });
-      });
+			<div class="dropMenu" id="serviceMenu">
+				<div class="menuBtn">
+					<a href="blockchain.html">Blockchain</a>
+				</div>
+				<div class="menuBtn">
+					<a href="datascience.html">Data Science</a>
+				</div>
+			</div>
 
-      $(document).ready(function(){
-        $("#responsiveServices").click(function(){
-          $("#serviceSubBtn1").fadeToggle();
-          $("#serviceSubBtn2").fadeToggle();
-        });
-      });
+			<div class="dropMenu" id="solutionsMenu">
+				<div class="menuBtn">
+					<a href="chaingate.html">ChainGate</a>
+				</div>
+				<div class="menuBtn">
+					<a href="defi.html">DeFi</a>
+				</div>
+			</div>
+		</header>
 
-      $(document).ready(function(){
-        $("#responsiveProducts").click(function(){
-          $("#productSubBtn1").fadeToggle();
-        });
-      });
+		<div class="responsiveMenu">
+			<a href="index.html"><div class="responsiveLogo"></div></a>
+			<div class="responsiveMenuBtn">
+				<span
+					style="
+						width: 100%;
+						height: 1px;
+						display: block;
+						background-color: white;
+						margin-top: 0px;
+					"
+				></span>
+				<span
+					style="
+						width: 100%;
+						height: 1px;
+						display: block;
+						background-color: white;
+						margin-top: 9px;
+					"
+				></span>
+				<span
+					style="
+						width: 100%;
+						height: 1px;
+						display: block;
+						background-color: white;
+						margin-top: 9px;
+					"
+				></span>
+			</div>
+		</div>
 
-    </script>
-    <script src="https://www.powr.io/powr.js?platform=html"></script>
-    <link rel="icon" type="image/x-icon" href="Wpps/favicon.png">
-  </head>
-  <body>
+		<div class="responsiveMenuFrame">
+			<div class="responsiveMenuPanel">
+				<div class="responsiveMenuPanelBtn" id="responsiveServices">
+					Consulting
+				</div>
+				<div
+					class="responsiveMenuPanelBtn"
+					id="serviceSubBtn1"
+					style="display: none"
+				>
+					<a href="blockchain.html">Blockchain</a>
+				</div>
+				<div
+					class="responsiveMenuPanelBtn"
+					id="serviceSubBtn2"
+					style="display: none"
+				>
+					<a href="datascience.html">Data Science</a>
+				</div>
 
-    <header>
-      <div class="headerButton" id="servicesMainBtn">services</div>
-      <div class="headerButton" id="solutionsMainBtn">solutions</div>
-      <a href="index.html"><div class="headerButton" style="background-image: url('Wpps/logo.png'); background-size: 30%; background-position: center; background-repeat: no-repeat; color: white;"></div></a>
-      <div class="headerButton"><a href="portfolio.html">portfolio</a></div>
-      <div class="headerButton"><a href="contactus.html">contact us</a></div>
+				<div class="responsiveMenuPanelBtn" id="responsiveProducts">
+					Products
+				</div>
+				<div
+					class="responsiveMenuPanelBtn"
+					id="productSubBtn1"
+					style="display: none"
+				>
+					<a href="chaingate.html">ChainGate</a>
+				</div>
+				<div
+					class="responsiveMenuPanelBtn"
+					id="productSubBtn2"
+					style="display: none"
+				>
+					<a href="defi.html">DeFi</a>
+				</div>
+				<div class="responsiveMenuPanelBtn">
+					<a href="portfolio.html">Portfolio</a>
+				</div>
+				<div class="responsiveMenuPanelBtn">
+					<a href="contactus.html">Contact us</a>
+				</div>
+				<div class="responsiveMenuPanelBtn" id="close">Close</div>
+			</div>
+		</div>
 
-      <div class="dropMenu" id="serviceMenu">
-        <div class="menuBtn"><a href="blockchain-development.html">Blockchain Development</a></div>
-        <div class="menuBtn"><a href="blockchain-analytics.html">Blockchain Analytics</a></div>
-        <div class="menuBtn"><a href="blockchain-ai.html">Blockchain AI</a></div>
-      </div>
+		<div class="homeFirstPanel">
+			<div class="homePanel">
+				<div class="imgSlide">
+					<strong
+						><h1
+							style="
+								text-align: center;
+								margin-top: 40%;
+								font-family: Gilroy-Bold, sans-serif;
+								font-size: 40px;
+							"
+						>
+							Decentralized solutions empowered by Data Science.
+						</h1></strong
+					>
+				</div>
+			</div>
 
-      <div class="dropMenu" id="solutionsMenu">
-        <div class="menuBtn"><a href="gasfee-predictor.html">Gas Fee Predictor</a></div>
-      </div>
-    </header>
+			<div class="bottomPanel">
+				<p
+					style="
+						font-family: 'Gilroy-Regular', sans-serif;
+						text-align: center;
+						line-height: 30px;
+						font-size: 14px;
+					"
+				>
+					Astrid is a company specialized in the development of hybrid
+					solutions both including Blockchain and Data Science.
+				</p>
+				<div class="switchPanelButton">
+					<p
+						style="
+							color: #ff03ed;
+							font-family: 'Questrial', sans-serif;
+						"
+					>
+						Show More &darr;
+					</p>
+				</div>
+			</div>
+		</div>
 
-    <div class="responsiveMenu">
-      <a href="index.html"><div class="responsiveLogo"></div></a>
-      <div class="responsiveMenuBtn">
-        <span style="width:100%; height: 1px; display: block; background-color: white; margin-top: 0px;"></span>
-        <span style="width:100%; height: 1px; display: block; background-color: white; margin-top: 9px;"></span>
-        <span style="width:100%; height: 1px; display: block; background-color: white; margin-top: 9px;"></span>
-      </div>
-    </div>
+		<div class="homeSecondPanel">
+			<div class="scrollContainer">
+				<div id="first-container" class="fade-container">
+					<h1
+						style="
+							position: relative;
+							padding: 20px;
+							font-family: Gilroy-Bold, sans-serif;
+							font-size: 40px;
+						"
+					>
+						Not just Developers. <br />
+					</h1>
+					<p
+						style="
+							position: relative;
+							padding-left: 20px;
+							padding-right: 100px;
+							line-height: 25px;
+							font-family: Gilroy-Regular, sans-serif;
+							font-size: 15px;
+						"
+					>
+						Astrid Network is a team made up mainly of two types of
+						technical figures: Blockchain Developers and Data
+						Scientists.
+						<br /><br />
+						Our versatile skills allow us to build applications,
+						infrastructures and services based on reliable data
+						through the use of blockchain and to fully unlock its
+						potential through data science, enhancing our solutions
+						and take them to the next level.
+						<img src="Wpps/shape5.png" class="main-img" />
+					</p>
+				</div>
+				<div id="second-container" class="fade-container">
+					<h1
+						style="
+							position: relative;
+							padding: 20px;
+							text-align: right;
+							font-family: Gilroy-Bold, sans-serif;
+							font-size: 35px;
+						"
+					>
+						We take your service to the next level <br />
+						through our skills.
+					</h1>
+					<div class="iconsPanel details-panel">
+						<div class="iconsBig">
+							<img src="./Wpps/blck.png" alt="" />
+							<p>
+								<span
+									style="
+										font-size: 18px;
+										color: #ff03ed;
+										font-family: Gilroy-Bold, sans-serif;
+									"
+									>BLOCKCHAIN</span
+								>
+								<br />
+								<br />Let us guide you through any process of
+								development of your dApp: from the early stage and
+								design until its delivery. We will choice the
+								blockchain that perfectly fits your needs and will
+								code any kind of smart contract on it.
+							</p>
+						</div>
+						<div class="iconsBig">
+							<img src="./Wpps/ds.png" alt="" />
+							<p>
+								<span
+									style="
+										font-size: 18px;
+										color: #ff03ed;
+										font-family: Gilroy-Bold, sans-serif;
+									"
+									>DATA SCIENCE</span
+								>
+								<br />
+								<br />
+								You already have a dApp or plan to have a new one and
+								you are trying to embrace the power of AI and Data
+								Science. We can perfectly guide you through this
+								process, suggesting and developing customized
+								solutions base on those technologies.
+							</p>
+						</div>
+					</div>
+				</div>
+				<div id="third-container" class="fade-container">
+					<h1
+						style="
+							position: relative;
+							padding: 20px;
+							margin-top: 80px;
+							text-align: right;
+						"
+					>
+						Build your project with best available technologies.
+					</h1>
+					<div class="iconsPanel">
+						<div
+							class="iconsSmall"
+							style="
+								background-image: url('Wpps/programming-language/python.png');
+							"
+						></div>
+						<div
+							class="iconsSmall"
+							style="
+								background-image: url('Wpps/programming-language/react.png');
+							"
+						></div>
+						<div
+							class="iconsSmall"
+							style="
+								background-image: url('Wpps/programming-language/solidity.png');
+							"
+						></div>
+						<div
+							class="iconsSmall"
+							style="
+								background-image: url('Wpps/programming-language/rust.png');
+							"
+						></div>
+						<div
+							class="iconsSmall"
+							style="
+								background-image: url('Wpps/programming-language/tf.png');
+							"
+						></div>
+						<div
+							class="iconsSmall"
+							style="
+								background-image: url('Wpps/programming-language/keras.png');
+							"
+						></div>
+						<div
+							class="iconsSmall"
+							style="
+								background-image: url('Wpps/programming-language/sqlite.png');
+							"
+						></div>
+						<div
+							class="iconsSmall"
+							style="
+								background-image: url('Wpps/programming-language/numpy.png');
+							"
+						></div>
+						<div
+							class="iconsSmall"
+							style="
+								background-image: url('Wpps/programming-language/mongodb.png');
+								height: 90px;
+								background-size: 60%;
+							"
+						></div>
+						<div
+							class="iconsSmall"
+							style="
+								background-image: url('Wpps/programming-language/html.png');
+							"
+						></div>
+						<div
+							class="iconsSmall"
+							style="
+								background-image: url('Wpps/programming-language/css.png');
+							"
+						></div>
+						<div
+							class="iconsSmall"
+							style="
+								background-image: url('Wpps/programming-language/js.png');
+							"
+						></div>
+					</div>
+				</div>
+				<div id="fourth-container" class="fade-container">
+					<h1
+						style="
+							position: relative;
+							padding: 20px;
+							margin-top: 80px;
+							text-align: left;
+						"
+					>
+						Working across multiple Entities.
+					</h1>
+					<div class="iconsPanel">
+						<div
+							class="iconsSmall"
+							style="
+								background-image: url('Wpps/entities/ethereum.png');
+								background-size: 60%;
+							"
+						></div>
+						<div
+							class="iconsSmall"
+							style="background-image: url('Wpps/entities/evms.png')"
+						></div>
+						<div
+							class="iconsSmall"
+							style="background-image: url('Wpps/entities/ocean.png')"
+						></div>
+						<div
+							class="iconsSmall"
+							style="
+								background-image: url('Wpps/entities/datawhale.png');
+								width: 200px;
+								background-size: 100%;
+							"
+						></div>
+						<div
+							class="iconsSmall"
+							style="background-image: url('Wpps/entities/ck.png')"
+						></div>
+						<div
+							class="iconsSmall"
+							style="
+								background-image: url('Wpps/entities/fluxLogo.png');
+							"
+						></div>
+					</div>
+				</div>
+				<div id="form-container" class="form-container">
+					<h2>We would love to hear your idea.</h2>
+					<div class="states-container">
+						<form
+							id="contact-form"
+							class="contact-form"
+							name="contact-form"
+						>
+							<select
+								id="name"
+								name="Client Type"
+								required
+								class="input select-input"
+								placeholder="Who you are?"
+							>
+								<option value="" selected disabled hidden>
+									Who you are?
+								</option>
+								<option value="A Private">A Private</option>
+								<option value="Represent an entity">
+									Represent an entity
+								</option>
+							</select>
+							<div class="form-flex">
+								<input
+									type="text"
+									id="contact-info"
+									name="Contact Info"
+									class="input"
+									required
+									placeholder="Type here your contact info"
+								/>
+								<select
+									id="contact-type"
+									name="Contact Method"
+									required
+									class="input select-input"
+								>
+									<option value="" selected disabled hidden>
+										Which kind of contact?
+									</option>
+									<option value="Telegram">Telegram</option>
+									<option value="Discord">Discord</option>
+									<option value="Twitter">Twitter</option>
+									<option value="E-Mail">E-Mail</option>
+								</select>
+							</div>
+							<select
+								id="contact-purpose"
+								name="Purpose"
+								required
+								class="input select-input"
+							>
+								<option value="" selected disabled hidden>
+									Why are you contacting us?
+								</option>
+								<option value="Looking for consulting service">
+									Looking for consulting service
+								</option>
+								<option
+									value="Want to integrate ChainGate into your service"
+								>
+									Want to integrate ChainGate into your service
+								</option>
+								<option value="Technical support on ChainGate">
+									Technical support on ChainGate
+								</option>
+								<option
+									value="Want to integrate LendingAl into your service"
+								>
+									Want to integrate LendingAl into your service
+								</option>
+								<option value="Technical support on LendingAI">
+									Technical support on LendingAI
+								</option>
+								<option value="Others">Others</option>
+							</select>
 
-    <div class="responsiveMenuFrame">
-      <div class="responsiveMenuPanel">
-        <div class="responsiveMenuPanelBtn" id="responsiveServices">Services</div>
-        <div class="responsiveMenuPanelBtn" id="serviceSubBtn1" style="display: none;"><a href="blockchain-analytics.html">Blockchain Analytics</a></div>
-        <div class="responsiveMenuPanelBtn" id="serviceSubBtn2" style="display: none;"><a href="blockchain-development.html">Blockchain Development</a></div>
-        <div class="responsiveMenuPanelBtn" id="serviceSubBtn3" style="display: none;"><a href="blockchain-ai.html">Blockchain AI</a></div>
-        <div class="responsiveMenuPanelBtn" id="responsiveProducts">Products</div>
-        <div class="responsiveMenuPanelBtn" id="productSubBtn1" style="display: none;"><a href="gasfee-predictor.html">Gas Fee Predictor</a></div>
-        <div class="responsiveMenuPanelBtn"><a href="portfolio.html">Portfolio</a></div>
-        <div class="responsiveMenuPanelBtn"><a href="contactus.html">Contact us</a></div>
-        <div class="responsiveMenuPanelBtn" id="close">Close</div>
-      </div>
-    </div>
+							<textarea
+								id="message"
+								name="Message"
+								class="input"
+								required
+								placeholder="Write more about your request"
+							></textarea>
 
-    <div class="homeFirstPanel">
+							<button type="submit">Send your request</button>
+						</form>
+						<div class="loading-container" id="loading-container">
+							<div class="loader"></div>
+						</div>
+						<div class="submit-container" id="submit-container">
+							<p>
+								Thank you for contacting us, we will get back to you
+								shortly.
+							</p>
+						</div>
+					</div>
+				</div>
+				<footer>
+					<div class="footerSection">
+						<div
+							class="headerButton"
+							style="
+								height: 60px;
+								width: 60px;
+								background-image: url('Wpps/logo.png');
+								background-size: 90%;
+								background-position: center;
+								background-repeat: no-repeat;
+								color: white;
+							"
+						></div>
+						<p style="font-size: 13px">
+							Shape future of blockchain with data. <br /><br />
+							Via Gorizia 8, Massafra, 74016, TA, Italy.<br />
+							<a
+								href="http://copyright.it/copyright/copyright-certificato-di-deposito.html?numdepot=DEP638212461706089543"
+								text-decoration="underline"
+								><u>
+									Astrid Network ® is a trademark registered by
+									Hirundo Technologies.
+								</u>
+							</a>
+							All rights are reserved.
+						</p>
+					</div>
+					<div class="footerSection">
+						<p style="font-size: 13px">
+							<span style="font-size: 18px">SiteMap</span> <br />
+							<br />
+							<a href="blockchain.html">Blockchain</a>
+							<br />
+							<a href="datascience.html">Data Science</a>
+							<br />
+							<a href="chaingate.html">Chain Gate</a>
+							<br />
+							<a href="defi.html">DeFi</a>
+						</p>
+					</div>
+					<div class="footerSection">
+						<p style="font-size: 13px">
+							<span style="font-size: 18px">Contacts</span> <br />
+							<br />
+							<a href="contactus.html" target="_blank">Contact us</a>
+							<br />
+							<a href="https://twitter.com/astrid_net" target="_blank"
+								>Twitter</a
+							>
+							<br />
+							<a href="https://t.me/gicappaemme" target="_blank"
+								>Telegram</a
+							>
+							<br />
+							<a href="https://github.com/astrid-net" target="_blank"
+								>Github</a
+							>
+						</p>
+					</div>
+				</footer>
+			</div>
+		</div>
 
-      <div class="homePanel">
-        <div class="imgSlide" >
-          <strong><h1 style="text-align: center; margin-top: 40%;">Decentralized solutions empowered by Data Science.</h1></strong>
-        </div>
-      </div>
-
-      <div class="bottomPanel">
-        <p style="font-family: 'Questrial', sans-serif; text-align: center; line-height: 30px; font-size: 14px;">Astrid is a company specialized in the development of hybrid solutions both including Blockchain and Data Science.</p>
-        <div class="switchPanelButton"><p style="color: #FF03ED;font-family: 'Questrial', sans-serif;">Show More &#8595</p></div>
-      </div>
-    </div>
-
-    <div class="homeSecondPanel">
-      <div class="scrollContainer">
-        <h1 style="position: relative; padding: 20px; margin-top: 200px;">Not just Developers <br> but also Analysts. </h1>
-        <p style="position: relative; padding-left: 100px;padding-right: 100px; line-height: 25px;">Astrid is a team specialized in Smart Contract Development on any Blockchain and on-chain data mining to create interesting metrics. This means that we can develop your smart contract and extract data from it to understand important statistics and use them to improve your project or show them to your audience (example: we create your DeFi protocol and develop software that helps you understand the most use or we grow your NFT collection and build an awesome landing page showing statistics about its growth). We apply our skills to help company through our consulting service and We also develop our own softwares. There are endless possibilities to apply our skills.<img src="Wpps/shape5.png" width="300px" height="350px" style="position: absolute; top: 50px; right: -120px; z-index: -1;"></p>
-
-        <h1 style="position: relative; padding: 20px; margin-top: 200px;">Our skills <br> at your disposal. </h1>
-        <div class="iconsPanel">
-          <div class="iconsBig"> <p style="padding: 30px;"><span style="font-size: 20px;">Blockchain Development</span> <br> <br>We can develop any type of Smart Contract on any Blockchain. We can develop dApps on Ethereum, any EVM Blockchain (Polygon, Avax, BSC etc...) or even Elrond,  Solana and any other Rust-familiar blockchain.</p></div>
-          <div class="iconsBig"> <p style="padding: 30px;"><span style="font-size: 20px;">Blockchain Analytics</span> <br> <br>  We know the best on-chain data mining techniques for any blockchain. We can extract data and display it on awesome UI or make it available to you via different file formats or Rest API.</p> </div>
-          <div class="iconsBig"> <p style="padding: 30px;"><span style="font-size: 20px;">Data Science</span> <br> <br>  The data we extract can be processed to build awesome metrics: we can study statistics, correlations or develop machine learning models to predict future trends. </p> </div>
-        </div>
-
-        <h1 style="position: relative; padding: 20px; margin-top: 80px; text-align: right;">Build your project with best available technologies.</h1>
-        <div class="iconsPanel">
-          <div class="iconsSmall" style="background-image: url('Wpps/programming-language/python.png')"></div>
-          <div class="iconsSmall" style="background-image: url('Wpps/programming-language/react.png')"></div>
-          <div class="iconsSmall" style="background-image: url('Wpps/programming-language/solidity.png')"></div>
-          <div class="iconsSmall" style="background-image: url('Wpps/programming-language/rust.png')"></div>
-          <div class="iconsSmall" style="background-image: url('Wpps/programming-language/tf.png')"></div>
-          <div class="iconsSmall" style="background-image: url('Wpps/programming-language/keras.png')"></div>
-          <div class="iconsSmall" style="background-image: url('Wpps/programming-language/sqlite.png')"></div>
-          <div class="iconsSmall" style="background-image: url('Wpps/programming-language/numpy.png')"></div>
-          <div class="iconsSmall" style="background-image: url('Wpps/programming-language/mongodb.png'); height: 90px; background-size: 60%;"></div>
-          <div class="iconsSmall" style="background-image: url('Wpps/programming-language/html.png')"></div>
-          <div class="iconsSmall" style="background-image: url('Website/Wpps/programming-language/css.png')"></div>
-          <div class="iconsSmall" style="background-image: url('Website/Wpps/programming-language/js.png')"></div>
-        </div>
-
-        <h1 style="position: relative; padding: 20px; margin-top: 80px; text-align: left;">Working across multiple Entities.</h1>
-        <div class="iconsPanel">
-          <div class="iconsSmall" style="background-image: url('Wpps/entities/ethereum.png'); background-size: 60%;"></div>
-          <div class="iconsSmall" style="background-image: url('Wpps/entities/evms.png')"></div>
-          <div class="iconsSmall" style="background-image: url('Wpps/entities/ocean.png')"></div>
-          <div class="iconsSmall" style="background-image: url('Wpps/entities/datawhale.png'); width: 200px; background-size: 100%;"></div>
-          <div class="iconsSmall" style="background-image: url('Wpps/entities/ck.png')"></div>
-          <div class="iconsSmall" style="background-image: url('Wpps/entities/fluxLogo.png')"></div>
-        </div>
-
-        <h1 style="text-align: center;">Contact us. <br> We are looking forward to start working with you.</h1>
-        <iframe src="https://www.powr.io/contact-form/i/34107602#page" width="100%" height="500px;" style="border: 1px solid black; margin-bottom: 50px;" scrolling="no"></iframe>
-        <a href="https://www.powr.io/contact-form/i/34107602#page"><div class="contactUs">contact form page</div></a>
-
-        <footer>
-          <div class="footerSection"> <div class="headerButton" style="height: 60px; width: 60px; background-image: url('Wpps/logo.png'); background-size: 90%; background-position: center; background-repeat: no-repeat; color: white;"></div> <p style="font-size: 13px;">Shape future of blockchain with data. <br><br> Via Gorizia 8, Massafra, 74016, TA, Italy.<br> <a href='http://copyright.it/copyright/copyright-certificato-di-deposito.html?numdepot=DEP638212461706089543' text-decoration='underline'>Astrid Network ® is a trademark registered by Hirundo Technologies.</a> All rights are reserved.</p></div>
-          <div class="footerSection"> <p style="font-size: 13px;"> <span style="font-size: 18px;">SiteMap</span> <br> <br> <a href="blockchain-analytics.html">Blockchain Analytics</a> <br> <a href="blockchain-development.html">Blockchain Development</a> <br> <a href="nft-api.html">NFTs API</a> <br> <a href="portfolio.html">Portfolio</a> </p> </div>
-          <div class="footerSection"> <p style="font-size: 13px;"> <span style="font-size: 18px;">Contacts</span> <br> <br> <a href="contactus.html">Contact us</a> <br> <a href="https://twitter.com/astrid_net">Twitter</a> <br> <a href="https://t.me/gicappaemme">Telegram</a> <br> <a href="https://discord.com/users/809888220182741022">Discord</a> </p> </div></div>
-        </footer>
-      </div>
-    </div>
-  </body>
-
+		<script src="script.js"></script>
+		<script src="./js/index.js"></script>
+	</body>
 </html>

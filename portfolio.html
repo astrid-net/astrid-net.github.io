@@ -1,176 +1,529 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<title>Portfolio</title>
+		<link rel="stylesheet" href="style.css" />
+		<link rel="stylesheet" href="./css/portfolio.css" />
+		<link rel="icon" type="image/x-icon" href="Wpps/favicon.png" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	</head>
+	<body>
+		<div class="wrapping-container">
+			<header>
+				<div class="headerButton" id="servicesMainBtn">
+					consulting
+				</div>
+				<div class="headerButton" id="solutionsMainBtn">
+					solutions
+				</div>
+				<a href="index.html"
+					><div
+						class="headerButton"
+						style="
+							background-image: url('Wpps/logo.png');
+							background-size: 30%;
+							background-position: center;
+							background-repeat: no-repeat;
+							color: white;
+						"
+					></div
+				></a>
+				<div class="headerButton">
+					<a href="portfolio.html">portfolio</a>
+				</div>
+				<div class="headerButton">
+					<a href="contactus.html">contact us</a>
+				</div>
 
-<head>
-    <meta charset="utf-8">
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script>
-        $(document).ready(function() {
-            setTimeout(function() {
-                $('.scrollContainer').fadeIn(800);
-            }, 200);
-        });
-        $(document).ready(function() {
-            $(".responsiveMenuBtn").click(function() {
-                $(".responsiveMenuFrame").fadeIn();
-                $(".responsiveMenuBtn").fadeOut();
-            });
-        });
-        $(document).ready(function() {
-            $("#close").click(function() {
-                $(".responsiveMenuFrame").fadeOut();
-                $(".responsiveMenuBtn").fadeIn();
-            });
-        });
+				<div class="dropMenu" id="serviceMenu">
+					<div class="menuBtn">
+						<a href="blockchain.html">Blockchain</a>
+					</div>
+					<div class="menuBtn">
+						<a href="datascience.html">Data Science</a>
+					</div>
+				</div>
 
-        $(document).ready(function() {
-            $("#responsiveServices").click(function() {
-                $("#serviceSubBtn1").fadeToggle();
-                $("#serviceSubBtn2").fadeToggle();
-                $("#serviceSubBtn3").fadeToggle();
-            });
-        });
+				<div class="dropMenu" id="solutionsMenu">
+					<div class="menuBtn">
+						<a href="chaingate.html">ChainGate</a>
+					</div>
+					<div class="menuBtn">
+						<a href="defi.html">DeFi</a>
+					</div>
+				</div>
+			</header>
 
-        $(document).ready(function() {
-            $("#responsiveProducts").click(function() {
-                $("#productSubBtn1").fadeToggle();
-            });
-        });
-    </script>
-    <script src="https://www.powr.io/powr.js?platform=html"></script>
-    <link rel="icon" type="image/x-icon" href="Wpps/favicon.png">
-</head>
+			<div class="responsiveMenu">
+				<a href="index.html"><div class="responsiveLogo"></div></a>
+				<div class="responsiveMenuBtn">
+					<span
+						style="
+							width: 100%;
+							height: 1px;
+							display: block;
+							background-color: white;
+							margin-top: 0px;
+						"
+					></span>
+					<span
+						style="
+							width: 100%;
+							height: 1px;
+							display: block;
+							background-color: white;
+							margin-top: 9px;
+						"
+					></span>
+					<span
+						style="
+							width: 100%;
+							height: 1px;
+							display: block;
+							background-color: white;
+							margin-top: 9px;
+						"
+					></span>
+				</div>
+			</div>
 
-<body>
-    <header>
-        <div class="headerButton" id="servicesMainBtn">services</div>
-        <div class="headerButton" id="solutionsMainBtn">solutions</div>
-        <a href="index.html">
-            <div class="headerButton" style="background-image: url('Wpps/logo.png'); background-size: 30%; background-position: center; background-repeat: no-repeat; color: white;"></div>
-        </a>
-        <div class="headerButton"><a href="portfolio.html">portfolio</a></div>
-        <div class="headerButton"><a href="contactus.html">contact us</a></div>
+			<div class="responsiveMenuFrame">
+				<div class="responsiveMenuPanel">
+					<div class="responsiveMenuPanelBtn" id="responsiveServices">
+						Consulting
+					</div>
+					<div
+						class="responsiveMenuPanelBtn"
+						id="serviceSubBtn1"
+						style="display: none"
+					>
+						<a href="blockchain.html">Blockchain</a>
+					</div>
+					<div
+						class="responsiveMenuPanelBtn"
+						id="serviceSubBtn2"
+						style="display: none"
+					>
+						<a href="datascience.html">Data Science</a>
+					</div>
 
-        <div class="dropMenu" id="serviceMenu">
-            <div class="menuBtn"><a href="blockchain-development.html">Blockchain Development</a></div>
-            <div class="menuBtn"><a href="blockchain-analytics.html">Blockchain Analytics</a></div>
-            <div class="menuBtn"><a href="blockchain-ai.html">Blockchain AI</a></div>
-        </div>
+					<div class="responsiveMenuPanelBtn" id="responsiveProducts">
+						Products
+					</div>
+					<div
+						class="responsiveMenuPanelBtn"
+						id="productSubBtn1"
+						style="display: none"
+					>
+						<a href="chaingate.html">ChainGate</a>
+					</div>
+					<div
+						class="responsiveMenuPanelBtn"
+						id="productSubBtn2"
+						style="display: none"
+					>
+						<a href="defi.html">DeFi</a>
+					</div>
+					<div class="responsiveMenuPanelBtn">
+						<a href="portfolio.html">Portfolio</a>
+					</div>
+					<div class="responsiveMenuPanelBtn">
+						<a href="contactus.html">Contact us</a>
+					</div>
+					<div class="responsiveMenuPanelBtn" id="close">Close</div>
+				</div>
+			</div>
+			<div class="content-container">
+				<div class="wrapper-container">
+					<div class="work-container show">
+						<p class="header-text">Alga Back-End.</p>
+						<div class="general-info">
+							<div
+								class="img-info"
+								style="
+									background-image: url('https://pbs.twimg.com/media/FU84tULXoAIaLAR?format=jpg&name=medium');
+								"
+							></div>
+							<div class="text-info">
+								<ul>
+									<li>
+										<span>Category : </span> Blockchain Analytics
+									</li>
+									<li><span>Committent : </span> DataWhale Ltd.</li>
+									<li><span>Enviroment : </span> Ocean Protocol</li>
+									<li>
+										<p>
+											<span>Useful Links :</span>
+										</p>
+										<span>
+											<a href="https://datatoken.app/" target="_blank"
+												>App Website,</a
+											>&nbsp;
+											<a
+												href="https://github.com/astrid-net/Medusa-Alga-BackEnd"
+												target="_blank"
+												>Github,</a
+											>&nbsp;
+											<a
+												href="https://twitter.com/realdatawhale/status/1535508644703485952?s=20"
+												target="_blank"
+												>Tweet Announcement</a
+											>
+										</span>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="detailsDiv">
+							<p>
+								<span class="header-text">Work Details</span> <br />
+								<br />
+								The work performed consists of the back-end
+								development of a widely used app among Ocean Protocol
+								users. We used various data mining techniques and
+								on-chain communication protocols (such as subgraph
+								queries or transaction fetching and decoding) to
+								extract interesting statistics on datasets and
+								liquidity pools on Ocean and on both Ethereum and
+								Polygon chains, such as liquidity history, number of
+								liquidity providers, arithmetic mean of the amount of
+								tokens consumed for using the dataset, and various
+								statistics on time intervals. This data is updated in
+								real-time and shared via the Rest API.
+							</p>
+						</div>
+					</div>
+					<div class="work-container">
+						<p class="header-text">
+							ClaimKitty Token Airdrop Smart contract & UI.
+						</p>
+						<div class="general-info">
+							<div
+								class="img-info"
+								style="
+									background-image: url('https://pbs.twimg.com/media/Fiqh-WRXgAAEXwn?format=png&name=medium');
+								"
+							></div>
+							<div class="text-info">
+								<ul>
+									<li>
+										<span>Category :</span> Blockchain Development
+									</li>
+									<li><span>Committent :</span> ClaimKitty</li>
+									<li><span>Enviroment :</span> Ethereum, EVMs</li>
+									<li>
+										<p>
+											<span>Useful Links : </span>
+										</p>
+										<span>
+											<a
+												href="https://app.claimkitty.com/"
+												target="_blank"
+												>App Website,</a
+											>&nbsp;
 
-        <div class="dropMenu" id="solutionsMenu">
-            <div class="menuBtn"><a href="gasfee-predictor.html">Gas Fee Predictor</a></div>
-        </div>
-    </header>
+											<a
+												href="https://twitter.com/astrid_net/status/1597267482703966210?s=20"
+												target="_blank"
+												>Tweet Announcement</a
+											>
+										</span>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="detailsDiv">
+							<p>
+								<span class="header-text">Work Details</span>
+								<br />
+								<br />ClaimKitty is an app made for all developers
+								with the aim of simplifying the AirDrop of tokens. We
+								have built a system that can airdrop tokens to any
+								number of users up to a few hundred thousand safely.
+								Users will be able to claim their tokens via a
+								platform page on Ethereum and the main EVMs (BSC,
+								Polygon, Arbitrium etc...).
+							</p>
+						</div>
+					</div>
+					<div class="work-container">
+						<p class="header-text">
+							Metadata analytics for NFTs Collection.
+						</p>
+						<div class="general-info">
+							<div
+								class="img-info"
+								style="
+									background-image: url('data:image/png;base64,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');
+								"
+							></div>
+							<div class="text-info">
+								<ul>
+									<li>
+										<span>Category :</span> Blockchain Analytics
+									</li>
+									<li><span>Committent :</span> Private Customer</li>
+									<li><span>Enviroment :</span> Ethereum</li>
+									<li>
+										<p>
+											<span>Useful Links : </span>
+										</p>
+										<span>
+											<a
+												href="https://github.com/astrid-net/NFTmetadataAnalytics"
+												target="_blank"
+												>Github,</a
+											>&nbsp;
+											<a
+												href="https://twitter.com/astrid_net/status/1563988496049704965?s=20"
+												target="_blank"
+												>Tweet Announcement</a
+											>
+										</span>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="detailsDiv">
+							<p>
+								<span class="header-text">Work Details</span>
+								<br />
+								<br />
+								We created a tool for extracting and analysing the
+								metadata of the main NFT collections and delivered the
+								script to the user. The user obtained the metadata via
+								HTTPS requests and then calculated statistics on the
+								rarity of NFT traits such as the Rarity Score via the
+								formula shared by Rarity Tools. With this data, the
+								user was able to identify the most valued traits and
+								use it for his trading strategies.
+							</p>
+						</div>
+					</div>
+					<div class="work-container">
+						<p class="header-text">NFT Collection Development.</p>
+						<div class="general-info">
+							<div
+								class="img-info"
+								style="
+									background-image: url('https://pbs.twimg.com/media/Fiqh-WRXgAAEXwn?format=png&name=medium');
+								"
+							></div>
+							<div class="text-info">
+								<ul>
+									<li>
+										<span>Category :</span> Blockchain Development
+									</li>
+									<li><span>Committent :</span> ClaimKitty</li>
+									<li><span>Enviroment :</span> Arbitrium</li>
+									<li>
+										<p>
+											<span>Useful Links : </span>
+										</p>
+										<span>
+											<a href="https://bast.club/" target="_blank"
+												>App Website,</a
+											>
+										</span>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="detailsDiv">
+							<p>
+								<span class="header-text">Work Details</span>
+								<br />
+								<br />We are developing the NFT collection of the
+								ClaimKitty dApp. These NFTs will allow huge benefits
+								to the holders: they will get big discounts on AirDrop
+								creation fees and passive incomes on token exchange.
+							</p>
+						</div>
+					</div>
+					<div class="work-container">
+						<p class="header-text">
+							Otherdeed NFTs Trait Analysis for Ocean Market.
+						</p>
+						<div class="general-info">
+							<div
+								class="img-info"
+								style="
+									background-image: url('https://pbs.twimg.com/media/FjHwvHZXEAAa3oU?format=jpg&name=small');
+								"
+							></div>
+							<div class="text-info">
+								<ul>
+									<li>
+										<span>Category :</span> Blockchain Analytics
+									</li>
+									<li><span>Committent :</span> DataWhale Ltd.</li>
+									<li><span>Enviroment :</span> Ocean Protocol</li>
+									<li>
+										<p>
+											<span>Useful Links : </span>
+										</p>
+										<span>
+											<a
+												href="https://market.oceanprotocol.com/asset/did:op:4b6a02c6fa8e01dfbd1733972fe307c2553390c802d6ca62af80d7d3004e23b1"
+												target="_blank"
+												>App Website,</a
+											>&nbsp;
 
-    <div class="responsiveMenu">
-        <a href="index.html">
-            <div class="responsiveLogo" style="background-image: url('Wpps/logo.png');"></div>
-        </a>
-        <div class="responsiveMenuBtn">
-            <span style="width:100%; height: 1px; display: block; background-color: white; margin-top: 0px;"></span>
-            <span style="width:100%; height: 1px; display: block; background-color: white; margin-top: 9px;"></span>
-            <span style="width:100%; height: 1px; display: block; background-color: white; margin-top: 9px;"></span>
-        </div>
-    </div>
-
-    <div class="responsiveMenuFrame">
-        <div class="responsiveMenuPanel">
-            <div class="responsiveMenuPanelBtn" id="responsiveServices">Services</div>
-            <div class="responsiveMenuPanelBtn" id="serviceSubBtn1" style="display: none;"><a href="blockchain-analytics.html">Blockchain Analytics</a></div>
-            <div class="responsiveMenuPanelBtn" id="serviceSubBtn2" style="display: none;"><a href="blockchain-development.html">Blockchain Development</a></div>
-            <div class="responsiveMenuPanelBtn" id="serviceSubBtn3" style="display: none;"><a href="blockchain-ai.html">Blockchain AI</a></div>
-            <div class="responsiveMenuPanelBtn" id="responsiveProducts">Products</div>
-            <div class="responsiveMenuPanelBtn" id="productSubBtn1" style="display: none;"><a href="gasfee-predictor.html">Gas Fee Predictor</a></div>
-            <div class="responsiveMenuPanelBtn"><a href="portfolio.html">Portfolio</a></div>
-            <div class="responsiveMenuPanelBtn"><a href="contactus.html">Contact us</a></div>
-            <div class="responsiveMenuPanelBtn" id="close">Close</div>
-        </div>
-    </div>
-
-    <div class="homeFirstPanel" style="overflow-y: scroll;">
-        <div class="scrollContainer" style="top:0px;">
-            <h1 style="position: relative; padding: 20px; margin-top: 150px;">Alga Back-End.</h1>
-            <div class="generalInfoDiv" height="270px">
-                <div class="textInfos">Category: Blockchain Analytics <br> Committent: DataWhale Ltd. <br> Enviroment: Ocean Protocol <br> URL: https://datatoken.app/</div>
-                <div class="imgInfo" style="background-image: url('https://pbs.twimg.com/media/FU84tULXoAIaLAR?format=jpg&name=medium'); background-size: 100%; height: 75%;">
-                </div>
-            </div>
-            <div class="detailsDiv">
-                <p style="padding: 20px;"><span style="font-size: 40px;">Work Details</span> <br> <br> The work performed consists of the back-end development of a widely used app among Ocean Protocol users. We used various data mining techniques and on-chain communication protocols
-                    (such as subgraph queries or transaction fetching and decoding) to extract interesting statistics on datasets and liquidity pools on Ocean and on both Ethereum and Polygon chains, such as liquidity history, number of liquidity providers,
-                    arithmetic mean of the amount of tokens consumed for using the dataset, and various statistics on time intervals. This data is updated in real-time and shared via the Rest API.
-                </p>
-            </div>
-
-            <h1 style="position: relative; padding: 20px; margin-top: 100px;">ClaimKitty Token Airdrop Smart contract & UI.</h1>
-            <div class="generalInfoDiv">
-                <div class="textInfos">Category: Blockchain Development <br> Committent: ClaimKitty <br> Enviroment: Ethereum, EVMs <br> URL: https://app.claimkitty.com/</div>
-                <div class="imgInfo" style="background-image: url('https://pbs.twimg.com/media/Fiqh-WRXgAAEXwn?format=png&name=medium'); background-size: 100%;">
-                </div>
-            </div>
-            <div class="detailsDiv">
-                <p style="padding: 20px;"><span style="font-size: 40px;">Work Details</span> <br> <br>ClaimKitty is an app made for all developers with the aim of simplifying the AirDrop of tokens. We have built a system that can airdrop tokens to any number of users up to a few
-                    hundred thousand safely. Users will be able to claim their tokens via a platform page on Ethereum and the main EVMs (BSC, Polygon, Arbitrium etc...). </p>
-            </div>
-
-            <h1 style="position: relative; padding: 20px; margin-top: 100px;">Metadata analytics for NFTs Collection.</h1>
-            <div class="generalInfoDiv">
-                <div class="textInfos">Category: Blockchain Analytics <br> Committent: Private Customer <br> Enviroment: Ethereum <br> <a href="https://twitter.com/astrid_net/status/1563988496049704965?s=20&t=o9arlI9x99SFhhM1J64WBA" style="text-decoration: underline;">URL</a>
-                </div>
-                <div class="imgInfo" style="background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAATQAAACjCAMAAAAzSxLiAAAAeFBMVEUgICDT09MAAADc3NwdHR0aGhrZ2dkUFBQRERHX19cYGBhFRUVKSkrg4OAhISFycnLPz8+BgYHJyclYWFgyMjJnZ2cLCwuSkpKMjIwqKiqnp6e0tLQ4ODjCwsJvb29PT0+urq6cnJxgYGA+Pj6CgoK6urqRkZFXV1ciABo8AAAJIElEQVR4nO2c6XqiyhZArZEqEAWVCqOAQ/v+b3j3LkAxyU08/UNzTvbq7+uIFJtiWbPgYkEQBEEQBEEQBEEQBEEQBEEQBEEQBEEQBEEQBEEQBEEQBEEQBEEQ/zHkw7w6pz8F6cLVw0inXp3fn4Ba9c3mYZouMq/O8euRxUZb9jDW2m346jy/HNdrZvXDWGY3/NV5fjkuYbbarx9k31smol/frMmE6YwHD2IKxvSvr5/SSwuG1+rbIiR3JG0uTbldG4XfdI0kDblKC+pOCJGkX7fyJA2ZpKk68QMPkbsvk5O0xU2aq8bBmm6/athIGjJKU8dpgKv7+6Im1VwRSUNGaeFWTEP+7q5VU4vzYWaRpCFTSWv1JK2clzRVNFrPrJE0ZJQmV8lUPdPgtlepBqqt3V6tkTRk6ghMOtRP28zWzKCc+abuVtZIGnIdp/E3ba3Vm/rWeQ7l7M4aSUNuMwLe9lW5NjNnRXNdM5qskTRkNvdUjvN5e7ZqZutsozWShswn7HfMy5lv7Lw1koa8lxaML987G8saSUPeSXP73I9t7+vmrayRNORemsu0Rmsfy9lQ1kKShtxJ4xmoEilXi8+c4bSUpCFzaXyvh9Whz50x+0bSPDNpLhtV2c3n3+mRtJHZ4HavP1VF0j5wleb2335lTNJGriu335Yzknblw3oaSfueaeX2QNIeh6T9BSTtL7hKi7+/Y0jQjGBg+o7geEq/5XRQJA2ZhhzSPICiVQ6Pl3Zw6kECutUKMQmzfbR8kGitmVj++pv6eGfxRtqHgV6Ubh9VR/YP7lOGcYdY0+3diyA6MyxsKGT498VLyzbZl/di/RaUq6OHOQaffHP1K5GPdp5K0XM+BEEQBEEQBEH8p3FPnFwH+JMAoXs/NZXzPMhnZugvCft+9axzBWm5VWFW7u+tyV35dnsKoSj7H7+uZGK9etYM25XxOnB/4rd3j1bVcXJdtJS7+OevYAZV97SSZvLqELpcfJAmNjNpInm9NOmXda6FCZd47vZzjiluqWaJpbo/cEy4uE+1+JD6erx8t8PwcHGVdn17kDZtXKV9copnURQLVyzbnRuyBK8vRzVrNCQkwP+kqy+RDCBx2xbDfrc4XtpjODRAZrW81A4TwoYydTuFHFGuiC7LHbb0GNGHXuGr0OyWl2XhExfF6irtFt1Lk1Fb48GTNOl2bVubl3w/40p2zFkc2zLAchL28Dpu1rcKELBkJXllg1LE8ebCMTFL8c52k28grWgOqNClCbwua//UolmeBYZc3S4prEuMbKtamdz2Pj4/26Uy7VnDDtZDsXO9hTbNS5PBGD0zXtoStnRXq0laWJQWdlfRKxaBXWkr0eU9EyXkVJ7FJk97O3ug2mgL0s66sn1+1pu3uMw7K1q14B2mzRutI7VwfwTr015vdMUXwdbqLj1BrOJaEYtEVKf0LdGNUked4A7V6saEF63LU4rn55AZMUkbo5+1iBRIS2xzSs8CPr9Bmqw34nxKS23bF3yBCtL0gTueabaT7k000hl+sbcHqo1mKM2yI3dmMyQu4bLCQ5wUzjheidyoSNslxwMtSHOJWHODyfqpxLo+7uB4fsSfMXGV8PdN9uJk+DnOuTH8gEJu0tQlTlYY/QzRQZqtjHMgsueDNP8S4qWiecGozZW6xCsLGrEMJbNLf+tsLsrpckdp+g+8wXuf2KyhWKptj9/DSch378A27sfH8CoerMWZSynVisEHMUQJ0xK/HoZA4qKCvYBKLMPE7mTwx7cLoUlYPZc2RT/BBko7wtGqtslOoTR1FJYrOAfEOzy/qEE+U98mNaINorFrV8tbtz5KG8oGuIEPFqyAO+W4c644dBqkjXkPt6LiUIJyVQBydkUBJjb1usG3DBNKQlH17R/uCKI0YceZtLvoIK3x2YFMXgKUBjmoDJ4ihHM9f6jr8zlKMwcoIvimXAk2NbCTtEvopWFjByUFpMlgX56hMba2d6qx/j4DeQRp0Gtg0w7oIbaXtjt1DfYOGqSB1tTwMvYfxPFPh00+u5c2RdcWpcXDQ/HQFGQGpZlc2+EUQpTPr59zaS6DS56kTUVkkoaN3FyaXJ2FZl1/yAVKGxpB5aWddfnWD1zGpjFsE6E3ZR5VWNJUC5/OjiXQYZq1FbYpT9HmTpoMffS3w0l8Js3l+jydYv38/vOupLVT9Yw+Vs/30qC0NBGHXgEvC6snRgkPKA1qPNYtN3v2E6z2BYeuwlfPhWl0vY57fLhMi1RB6sV99bxGz8V99Wx99TQp5mA4xUs6gpu0cMGs/4kuyGr3nTToOfaYX15im5YPHSX0FBVekS+wUpVlNHQEUAKTQvmbsvwDB+YUrzu8cwgapwZnHGEk2FHdpJlGZNfoII3hLEIdLUTxHUErGB4GOSpf0xFcpSn4fOGaQ35MRPa+TfsoTa+5CvnB2tLJndWZH7jAkEMWVux5EEAZTMa5PrR1DEbvAfSuXhrU/zPD0gPSNjxQBtpBFt1JG6JvNUavhe4xYOdvPvVDjkb4dy5afPlrM0+QJouNaNaHnIl+Nrj9P9UzFyxtt33c4CQARiG66ivYqHADBqyHrNS35xmDs26yZVbpRvvOmnfav5Arprttu27YRl/CWfUcowsMiDMC3WV7GC2H4+BWLZmo9oc3+35y/xxpXTxI28SgRe1K7JLY7BeWTCxAWhNjkw5D1GHIgQ1ziPOq2KbSrx25wxmOOx18vXZZgmFmNwepusF3mss+9lU3yGLtx3DB1iet6j7ODWQmDdwbNnZujF4Iu1PQEexxs9opXCeyWEQjH9CeXrIiiXPkxTgvx9Fkcdi37pMJu0+1mv7ANAhmzBkmVbgPhmHcLBxfD2U04NF+v7z7CQB85wg1sdgN28VYc0N3WWcFjFThPMNphpNM0f1WAfP5DA6XQ479mgCvs/XFvGY98rqWM/0NA/UxwXXvPLEMfFLYCNIKJ9bQEUxjTRW8C4Pv3EWStx3htGOMu7iP7v+DfL3P6YdT/LuA2raBEQXPrD7+qy/kqcBAjVVlozXdF/o4MkibhG269ud/U/STMGZVLNyvfzrgn0K//04QBEEQBEEQBEEQBEEQBEEQBEEQBEEQBEEQBEEQBEEQBEEQBEH8cv4Hi6LK75XD1GAAAAAASUVORK5CYII='); background-size: 100%;">
-                </div>
-            </div>
-            <div class="detailsDiv">
-                <p style="padding: 20px;"><span style="font-size: 40px;">Work Details</span> <br> <br> We created a tool for extracting and analysing the metadata of the main NFT collections and delivered the script to the user. The user obtained the metadata via HTTPS requests
-                    and then calculated statistics on the rarity of NFT traits such as the Rarity Score via the formula shared by Rarity Tools. With this data, the user was able to identify the most valued traits and use it for his trading strategies.</p>
-            </div>
-
-            <h1 style="position: relative; padding: 20px; margin-top: 100px;">NFT Collection Development.</h1>
-            <div class="generalInfoDiv">
-                <div class="textInfos">Category: Blockchain Development <br> Committent: ClaimKitty <br> Enviroment: Arbitrium <br> <a href="https://twitter.com/astrid_net/status/1597267482703966210?s=20&t=MklG1NP-NtrZKgw3yd_FHw" style="text-decoration: underline;">URL</a></div>
-                <div class="imgInfo" style="background-image: url('https://pbs.twimg.com/media/Fiqh-WRXgAAEXwn?format=png&name=medium'); background-size: 100%;">
-                </div>
-            </div>
-            <div class="detailsDiv">
-                <p style="padding: 20px;"><span style="font-size: 40px;">Work Details</span> <br> <br>We are developing the NFT collection of the ClaimKitty dApp. These NFTs will allow huge benefits to the holders: they will get big discounts on AirDrop creation fees and passive
-                    incomes on token exchange.</p>
-            </div>
-
-            <h1 style="position: relative; padding: 20px; margin-top: 150px;">Otherdeed NFTs Trait Analysis for Ocean Market.</h1>
-            <div class="generalInfoDiv" height="270px">
-                <div class="textInfos">Category: Blockchain Analytics <br> Committent: DataWhale Ltd. <br> Enviroment: Ocean Protocol <br> <a href="https://twitter.com/realdatawhale/status/1599324051628957696?s=20&t=fOj5AuZiIFmrP3NAdNuNFA" style="text-decoration: underline;">URL</a></div>
-                <div class="imgInfo" style="background-image: url('https://pbs.twimg.com/media/FjHwvHZXEAAa3oU?format=jpg&name=small'); background-size: 100%;">
-                </div>
-            </div>
-            <div class="detailsDiv">
-                <p style="padding: 20px;"><span style="font-size: 40px;">Work Details</span> <br> <br> We developed software that fetches and decodes transactions from a given collection of NFTs. Two types of traits are calculated from these transactions: The most valued and the
-                    most profitable. The former are calculated by considering different price categories and calculating the frequency of a given trait in the highest priced category. In this way, the most valued traits can be defined. The most profitable
-                    traits, on the other hand, are defined by finding the NFTs with the highest ROI and using the same frequency calculation mechanism.
-                </p>
-            </div>
-
-            <h1 style="position: relative; padding: 20px; margin-top: 150px;">Real time extraction and visualization of Tweets.</h1>
-            <div class="generalInfoDiv" height="270px">
-                <div class="textInfos">Category: Blockchain Analytics <br> Committent: TradeFi <br> Enviroment: Social Media <br> <a href="https://twitter.com/astrid_net/status/1614332324673454080?s=20" style="text-decoration: underline;">URL</a></div>
-                <div class="imgInfo" style="background-image: url('https://pbs.twimg.com/media/FmdAsB8WIAMKgfR?format=jpg&name=4096x4096'); background-size: 110%; background-position: center;">
-                </div>
-            </div>
-            <div class="detailsDiv">
-                <p style="padding: 20px;"><span style="font-size: 40px;">Work Details</span> <br> <br> We have developed a tool for TradeFi, a private group of cryptotraders. The task consists in a crawler capable of instantly extracting the tweets of a list of accounts and archiving them in CSV format and display on a Web Page. All of these accounts provides insight into liquidity, volumes, whale activity etc. of several cryptocurrencies.
-                </p>
-            </div>
-
-        <footer>
-          <div class="footerSection"> <div class="headerButton" style="height: 60px; width: 60px; background-image: url('Wpps/logo.png'); background-size: 90%; background-position: center; background-repeat: no-repeat; color: white;"></div> <p style="font-size: 13px;">Shape future of blockchain with data. <br><br> Via Gorizia 8, Massafra, 74016, TA, Italy.<br> <a href='http://copyright.it/copyright/copyright-certificato-di-deposito.html?numdepot=DEP638212461706089543' text-decoration='underline'>Astrid Network ® is a trademark registered by Hirundo Technologies.</a> All rights are reserved.</p></div>
-          <div class="footerSection"> <p style="font-size: 13px;"> <span style="font-size: 18px;">SiteMap</span> <br> <br> <a href="blockchain-analytics.html">Blockchain Analytics</a> <br> <a href="blockchain-development.html">Blockchain Development</a> <br> <a href="nft-api.html">NFTs API</a> <br> <a href="portfolio.html">Portfolio</a> </p> </div>
-          <div class="footerSection"> <p style="font-size: 13px;"> <span style="font-size: 18px;">Contacts</span> <br> <br> <a href="contactus.html">Contact us</a> <br> <a href="https://twitter.com/astrid_net">Twitter</a> <br> <a href="https://t.me/gicappaemme">Telegram</a> <br> <a href="https://discord.com/users/809888220182741022">Discord</a> </p> </div></div>
-        </footer>
-
-    </div>
-    </div>
-</body>
-
+											<a
+												href="https://twitter.com/astrid_net/status/1613967469063831567?s=20"
+												target="_blank"
+												>Tweet Announcement</a
+											>
+										</span>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="detailsDiv">
+							<p>
+								<span class="header-text">Work Details</span>
+								<br />
+								<br />
+								We developed software that fetches and decodes
+								transactions from a given collection of NFTs. Two
+								types of traits are calculated from these
+								transactions: The most valued and the most profitable.
+								The former are calculated by considering different
+								price categories and calculating the frequency of a
+								given trait in the highest priced category. In this
+								way, the most valued traits can be defined. The most
+								profitable traits, on the other hand, are defined by
+								finding the NFTs with the highest ROI and using the
+								same frequency calculation mechanism.
+							</p>
+						</div>
+					</div>
+					<div class="work-container">
+						<p class="header-text">
+							Real time extraction and visualization of Tweets.
+						</p>
+						<div class="general-info">
+							<div
+								class="img-info"
+								style="
+									background-image: url('https://pbs.twimg.com/media/FmdAsB8WIAMKgfR?format=jpg&name=4096x4096');
+								"
+							></div>
+							<div class="text-info">
+								<ul>
+									<li>
+										<span>Category :</span> Blockchain Analytics
+									</li>
+									<li><span>Committent :</span> TradeFi</li>
+									<li><span>Enviroment : </span>Social Media</li>
+									<li>
+										<p>
+											<span>Useful Links : </span>
+										</p>
+										<span>
+											<a
+												href="https://twitter.com/astrid_net/status/1614332324673454080?s=20"
+												target="_blank"
+												>Tweet Announcement</a
+											>
+										</span>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="detailsDiv">
+							<p>
+								<span class="header-text">Work Details</span>
+								<br />
+								<br />
+								We have developed a tool for TradeFi, a private group
+								of cryptotraders. The task consists in a crawler
+								capable of instantly extracting the tweets of a list
+								of accounts and archiving them in CSV format and
+								display on a Web Page. All of these accounts provides
+								insight into liquidity, volumes, whale activity etc.
+								of several cryptocurrencies.
+							</p>
+						</div>
+					</div>
+					<div class="buttons">
+						<button id="left-button" class="direction-button">
+							&larr;
+						</button>
+						<button id="right-button" class="direction-button">
+							&rarr;
+						</button>
+					</div>
+				</div>
+			</div>
+			<footer>
+				<div class="footerSection">
+					<div
+						class="headerButton"
+						style="
+							height: 60px;
+							width: 60px;
+							background-image: url('Wpps/logo.png');
+							background-size: 90%;
+							background-position: center;
+							background-repeat: no-repeat;
+							color: white;
+						"
+					></div>
+					<p style="font-size: 13px">
+						Shape future of blockchain with data. <br /><br />
+						Via Gorizia 8, Massafra, 74016, TA, Italy.<br />
+						<a
+							href="http://copyright.it/copyright/copyright-certificato-di-deposito.html?numdepot=DEP638212461706089543"
+							text-decoration="underline"
+							><u>
+								Astrid Network ® is a trademark registered by Hirundo
+								Technologies.
+							</u>
+						</a>
+						All rights are reserved.
+					</p>
+				</div>
+				<div class="footerSection">
+					<p style="font-size: 13px">
+						<span style="font-size: 18px">SiteMap</span> <br />
+						<br />
+						<a href="blockchain.html">Blockchain</a>
+						<br />
+						<a href="datascience.html">Data Science</a>
+						<br />
+						<a href="chaingate.html">Chain Gate</a>
+						<br />
+						<a href="defi.html">DeFi</a>
+					</p>
+				</div>
+				<div class="footerSection">
+					<p style="font-size: 13px">
+						<span style="font-size: 18px">Contacts</span> <br />
+						<br />
+						<a href="contactus.html" target="_blank">Contact us</a>
+						<br />
+						<a href="https://twitter.com/astrid_net" target="_blank"
+							>Twitter</a
+						>
+						<br />
+						<a href="https://t.me/gicappaemme" target="_blank"
+							>Telegram</a
+						>
+						<br />
+						<a href="https://github.com/astrid-net" target="_blank"
+							>Github</a
+						>
+					</p>
+				</div>
+			</footer>
+		</div>
+		<script src="./js/portfolio.js"></script>
+		<script src="script.js"></script>
+	</body>
 </html>
