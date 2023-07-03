@@ -1,0 +1,131 @@
+.content-container .header-text {
+  font-size: 40px;
+  font-family: "Gilroy-Bold", sans-serif;
+}
+
+.content-container .wrapper-container {
+  margin-top: 130px;
+  position: relative;
+}
+
+@media screen and (max-width: 810px) {
+  .content-container .wrapper-container {
+    padding: 0 10px;
+  }
+}
+
+.content-container .wrapper-container .work-container {
+  margin-bottom: 100px;
+  background-color: #000;
+  display: none;
+  opacity: 0;
+  -webkit-transition: all 1.5s ease-out;
+  transition: all 1.5s ease-out;
+  min-height: 630px;
+  overflow: auto;
+}
+
+.content-container .wrapper-container .work-container.show {
+  opacity: 1;
+  display: block;
+}
+
+.content-container .wrapper-container .work-container.swipe-left {
+  opacity: 0;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+}
+
+.content-container .wrapper-container .work-container.swipe-right {
+  opacity: 0;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+}
+
+.content-container .wrapper-container .work-container .general-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+@media screen and (max-width: 800px) {
+  .content-container .wrapper-container .work-container .general-info {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.content-container .wrapper-container .work-container .general-info .img-info {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  background-position: top center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  width: 100%;
+  aspect-ratio: 3/2;
+}
+
+.content-container .wrapper-container .work-container .general-info .text-info {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.content-container .wrapper-container .work-container .general-info .text-info ul {
+  list-style: none;
+}
+
+.content-container .wrapper-container .work-container .general-info .text-info ul li {
+  margin-bottom: 15px;
+  font-size: 16px;
+  font-family: "Gilroy-Light", sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 7px;
+}
+
+.content-container .wrapper-container .work-container .general-info .text-info ul li span {
+  font-family: "Gilroy-Bold", sans-serif;
+}
+
+.content-container .wrapper-container .work-container .general-info .text-info ul li p {
+  width: 110px;
+}
+
+.content-container .wrapper-container .work-container .general-info .text-info ul li a {
+  font-family: "Gilroy-Light", sans-serif;
+}
+
+.content-container .wrapper-container .work-container .detailsDiv {
+  margin-top: 40px;
+  line-height: 1.5;
+  padding-bottom: 60px;
+}
+
+.content-container .wrapper-container .buttons {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 20px;
+}
+
+.content-container .wrapper-container .buttons button {
+  padding: 10px;
+  color: #ff30ed;
+  background-color: transparent;
+  outline: none;
+  border: 2px solid #ff30ed;
+  cursor: pointer;
+}
