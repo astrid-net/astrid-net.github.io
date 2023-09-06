@@ -251,3 +251,6 @@
   margin-bottom: 200px;
   opacity: 0.1;
 }
+.second-container .header-text {
+text-align: center !important;
+}
