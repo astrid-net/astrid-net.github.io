@@ -35,10 +35,18 @@
 				min-height: 400px;
 				line-height: 25px;
 			}
-			margin-top: 30px;
+		}
+		.header-text {
+			margin-bottom: 30px;
 		}
 		background: url("../Wpps/ai-2.png") bottom right/ 350px 350px
 			no-repeat;
+		.center-text {
+			text-align: center;
+		}
+		.center-box {
+			margin: auto;
+		}
 	}
 	.third-container {
 		@media screen and (max-width: 800px) {

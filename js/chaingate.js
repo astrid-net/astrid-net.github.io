@@ -15,7 +15,7 @@ const scrolling = (position) => {
 			(secondContainer.offsetHeight +
 				firstContainer.offsetHeight -
 				position +
-				150) /
+				750) /
 			secondContainer.offsetHeight;
 	}
 	if (

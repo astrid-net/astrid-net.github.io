@@ -50,14 +50,22 @@
   }
 }
 
-.content-container .second-container .info-text {
-  margin-top: 30px;
-}
-
 .content-container .second-container .info-text .text-info {
   max-width: 500px;
   min-height: 400px;
   line-height: 25px;
+}
+
+.content-container .second-container .header-text {
+  margin-bottom: 30px;
+}
+
+.content-container .second-container .center-text {
+  text-align: center;
+}
+
+.content-container .second-container .center-box {
+  margin: auto;
 }
 
 @media screen and (max-width: 800px) {
@@ -250,7 +258,4 @@
 .content-container .container {
   margin-bottom: 200px;
   opacity: 0.1;
-}
-.second-container .header-text {
-text-align: center !important;
 }
